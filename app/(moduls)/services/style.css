@@ -1,0 +1,38 @@
+.conference-text-wrapper {
+  padding: 20px 0px 10px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.conference-text-wrapper p {
+  color: #464545;
+}
+/* flex flex-1  flex-col items-center gap-[20px] justify-between w-[100%] px-[200px] */
+
+.services-main-container-padding {
+  padding: 60px 100px 100px 100px;
+}
+
+.gap-responsive {
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .services-main-container-padding {
+    padding: 10px 10px 10px 10px;
+  }
+  .gap-responsive {
+    gap: 10px;
+  }
+}
+
+.services-description {
+  color: #ffffff;
+}
+
+.services-heading{
+  font-family: 'Bonheur Royale', cursive !important;
+  font-weight: 400;
+}
+

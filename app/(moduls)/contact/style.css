@@ -1,0 +1,28 @@
+.contact-heading {
+  font-family: 'Bonheur Royale', cursive !important;
+  color: #EACF78;
+}
+
+.contact-form-modern {
+  background-color: #18181b; /* zinc-900 */
+  padding: 40px;
+  border-radius: 4px;
+  box-shadow: 0 20px 40px -20px rgba(0, 0, 0, 0.3);
+}
+
+.form-input {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(244, 241, 236, 0.2);
+  padding: 12px 0;
+  color: #f4f1ec;
+  font-style: italic;
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.form-input:focus {
+  border-bottom-color: #7c6648;
+}

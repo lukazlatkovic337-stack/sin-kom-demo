@@ -1,0 +1,564 @@
+@import url('https://fonts.googleapis.com/css2?family=Bonheur+Royale&family=Lora:wght@400;500;600;700&display=swap');
+
+* {
+  font-family: 'Lora', serif;
+}
+
+.swiperLine1,
+.swiperLine2,
+.swiperLine3,
+.swiperLine5 {
+  font-family: 'Bonheur Royale', cursive !important;
+  text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.5);
+  font-weight: 500;
+}
+
+.swiperLine4{ 
+  text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.okolinaTitle{
+  font-family: 'Bonheur Royale', cursive !important;
+}
+
+.galleryTitle {
+  font-family: 'Bonheur Royale', cursive !important;
+}
+
+.reservationTitle {
+  font-family: 'Bonheur Royale', cursive !important;
+}
+
+.mainPageText{
+  font-family: 'Bonheur Royale', cursive !important;
+  font-size: 62px;
+  font-weight: 500;
+}
+
+.about-hotel-text-home {
+  padding: 50px 10%;
+  color: #464545;
+  background-color: #f7f7f7;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.reveal-hidden {
+  opacity: 0;
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.delay-200 { animation-delay: 0.2s; }
+.delay-400 { animation-delay: 0.4s; }
+.delay-600 { animation-delay: 0.6s; }
+
+.icons-with-description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  width: 100%;
+}
+
+.icons-container {
+  display: flex;
+  gap: 100px;
+  padding: 10px;
+}
+
+.custom-button-reserve {
+  color: black;
+  background-color: #e0d9cd;
+  outline-offset: 4px;
+  padding: 5px 10px 5px 10px;
+  font-size: 28px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.custom-button-reserve:hover {
+  color: #464545;
+  background-color: #e0d9cd;
+  outline: 3px #7c6648 solid;
+  cursor: pointer;
+  transform: translateY(-3px);
+}
+
+.main-page-links {
+  margin-top:20px;
+  background-color: #f7f7f7;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 5px;
+  justify-content: left;
+  align-items: left;
+  padding: 20px;
+  -moz-box-shadow: 0 0 30px 5px #999;
+  -webkit-box-shadow: 0 0 30px 5px #999;
+}
+
+.main-page-links div {
+  padding-left: 30%;
+  cursor: pointer;
+  position: relative;
+}
+
+/* Creates the animated line */
+.main-page-links div::before {
+  content: "";
+  position: absolute;
+  left: calc(30% - 60px); /* Starts 60px to the left of the text */
+  top: 50%; /* Centers it vertically with the text */
+  transform: translateY(-50%);
+  height: 2px; /* Thickness of the bar */
+  width: 0; /* Starts hidden */
+  background-color: currentColor; /* Automatically matches your text color */
+  transition: width 0.4s ease-in-out;
+}
+
+.main-page-links div:hover::before {
+  width: 50px; /* Grows towards the text to a max of 50px */
+}
+.home-page-large-text {
+  color: #464545;
+  font-size: 32px;
+  font-weight: 400;
+}
+
+#home-page-large-text-font{
+  font-family: 'Bonheur Royale', cursive !important;
+}
+
+.mark-image {
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.mark-container {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  width: 100%;
+  background-image: url('../public/images/booking-background2.jpg');
+}
+
+.booking-reviews-container {
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 90%;
+  max-width: 1200px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(15px);
+  }
+
+.booking-reviews-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  width: 80%;
+  text-align: center;
+}
+
+.booking-reviews-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.booking-reviews-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #003580;
+  margin: 0;
+}
+
+.booking-reviews-rating {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 15px;
+  background-color: #ffffff;
+  border: 2px solid #003580;
+}
+
+.rating-score {
+  font-size: 24px;
+  font-weight: 700;
+  color: #003580;
+}
+
+.rating-label {
+  font-size: 16px;
+  font-weight: 600;
+  color: #003580;
+}
+
+.booking-reviews-text {
+  font-size: 14px;
+  color: #464545;
+  margin: 0;
+}
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: 100%;
+  margin: 20px 0;
+}
+
+.review-card {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: box-shadow 0.3s ease;
+}
+
+.review-card:hover {
+  border-color: #fcd949;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.review-author {
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 14px;
+}
+
+.review-stars {
+  font-size: 14px;
+  color: #fcd949;
+}
+
+.review-text {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.5;
+  margin: 0;
+  font-style: italic;
+}
+
+.booking-reviews-button {
+  padding: 10px 30px;
+  background-color: transparent;
+  color: #ffffff;
+  border: 1px solid #fcd949;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.booking-reviews-button:hover {
+  background-color: #fcd949;
+  color: #000000;
+}
+
+.vicinity-section {
+  position: relative;
+  width: 100%;
+  padding: 100px 20px 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  margin-top: 50px;
+}
+
+.vicinity-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60%;
+  background: linear-gradient(rgba(0, 53, 128, 0.1), rgba(0, 53, 128, 0.1)), 
+              url('../public/images/nature-background.jpg') center/cover no-repeat;
+  z-index: -1;
+}
+
+.vicinity-title {
+  font-size: 62px;
+  font-weight: 500;
+  color: #ffffff;
+  text-align: center;
+  margin: 0;
+  position: relative;
+  z-index: 1;
+  font-family: "Bonheur Royale", cursive !important;
+}
+
+.vicinity-description{
+  font-size: 18px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0% 20% 0% 20%;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.vicinity-photos-container {
+  display: flex;
+  gap: 30px;
+  width: 100%;
+  max-width: 1000px;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+}
+
+.vicinity-photo-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.vicinity-photo {
+  width: 280px;
+  height: 400px;
+  overflow: hidden;
+  outline: 2px solid #e0d9c9;
+  outline-offset: 7px;
+  cursor: pointer;
+  transition: outline-offset 0.3s ease, outline-color 0.3s ease;
+}
+
+.vicinity-photo:hover {
+  outline-offset: 12px;
+  outline-color: #464545;
+}
+
+.vicinity-photo:nth-child(1) {
+  width: 280px;
+  height: 400px;
+}
+
+.vicinity-photo-card:nth-child(2) .vicinity-photo {
+  width: 336px;
+  height: 480px;
+}
+
+.vicinity-photo-card:nth-child(3) .vicinity-photo {
+  width: 280px;
+  height: 400px;
+}
+
+.vicinity-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.vicinity-photo:hover img {
+  transform: scale(1.1);
+}
+
+.vicinity-photo-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: black;
+  margin: 10px 0 5px 0;
+  text-align: center;
+}
+
+.vicinity-photo-description {
+  font-size: 14px;
+  color: #464545;
+  margin: 0 0 10px 0;
+  text-align: center;
+  line-height: 1.4;
+}
+
+.vicinity-learn-more {
+  font-size: 14px;
+  color: #7c6648;
+  text-decoration: underline;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.vicinity-learn-more:hover {
+  color: black;
+}
+
+/* Mobile devices */
+@media (max-width: 768px) {
+  .about-hotel-text-home {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 20px;
+  }
+  .icons-with-description {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .icons-container {
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .main-page-links {
+    background-color: #f7f7f7;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 5px;
+    justify-content: left;
+    align-items: left;
+    padding-top: 20px;
+  }
+  .main-page-links div {
+    padding-left: 20%;
+  }
+
+  .main-page-links div::before {
+    left: calc(20% - 60px); /* Adjusts the starting position for mobile */
+  }
+  .home-page-large-text {
+    font-size: 18px;
+  }
+
+  .booking-reviews-container {
+    padding: 30px 15px;
+  }
+
+  .booking-reviews-title {
+    font-size: 20px;
+  }
+
+  .rating-score {
+    font-size: 20px;
+  }
+
+  .rating-label {
+    font-size: 14px;
+  }
+
+  .booking-reviews-text {
+    font-size: 13px;
+  }
+
+  .booking-reviews-button {
+    padding: 8px 24px;
+    font-size: 14px;
+  }
+
+  .reviews-grid {
+    gap: 15px;
+  }
+
+  .reviews-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .review-card {
+    padding: 15px;
+  }
+
+  .review-author {
+    font-size: 13px;
+  }
+
+  .review-stars {
+    font-size: 12px;
+  }
+
+  .review-text {
+    font-size: 12px;
+  }
+
+  .vicinity-section {
+    width: 100%;
+    padding: 60px 10% 30px;
+  }
+
+  .vicinity-background {
+    height: 25%;
+  }
+
+  .vicinity-photos-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .vicinity-photo-card {
+    width: 100%;
+    align-items: center;
+  }
+
+  .vicinity-photo {
+    width: 100%;
+    height: 400px;
+  }
+
+  .vicinity-photo-card:nth-child(2) .vicinity-photo {
+    width: 100%;
+    height: 400px;
+  }
+
+  .vicinity-photo-card:nth-child(3) .vicinity-photo {
+    width: 100%;
+    height: 400px;
+  }
+
+  .vicinity-photo-title {
+    font-size: 16px;
+  }
+
+  .vicinity-photo-description {
+    font-size: 13px;
+  }
+
+  .vicinity-learn-more {
+    font-size: 13px;
+  }
+
+  .vicinity-title {
+    font-size: 28px;
+    padding: 0 15px;
+  }
+}

@@ -1,0 +1,51 @@
+.custom-button-reserve {
+  color: #f4f1ec;
+  background-color: #464545;
+  padding: 12px 28px;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 6px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.custom-button-reserve:hover {
+  background-color: #7c6648;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.room-card {
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+  width: 100%;
+  padding: 30px;
+  border-radius: 12px;
+  background-color: #f4f1ec;
+  border: 1px solid rgba(124, 102, 72, 0.1);
+  box-shadow: 0 10px 30px -15px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease;
+}
+
+.room-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px -20px rgba(0, 0, 0, 0.2);
+  border-color: rgba(124, 102, 72, 0.3);
+}
+
+.description-text {
+  color: #464545;
+}
+
+@media (max-width: 1024px) {
+  .room-card {
+    flex-direction: column;
+    padding: 15px;
+    gap: 20px;
+  }
+}
