@@ -152,7 +152,7 @@ export default function Reservation() {
   };
 
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-950 font-sans pt-10 pb-10">
+    <div className="flex flex-col min-h-screen w-full items-center justify-center bg-zinc-950 font-sans pt-10 pb-10">
       <main className="flex flex-1 w-full max-w-4xl flex-col items-center justify-start pt-10 pb-20 px-4 md:px-16 bg-white/5 backdrop-blur-xl rounded-[2rem] border border-white/10 shadow-2xl sm:items-start">
         <div className="flex flex-col items-center sm:items-start gap-4 mb-12 w-full">
           <div className="flex flex-col md:flex-row items-center md:items-end gap-6 md:justify-between w-full">
@@ -261,7 +261,7 @@ export default function Reservation() {
                   </div>
                 </div>
 
-                <div className="flex flex-col sm:flex-row justify-between sm:items-center gap-4 mt-2 border-t dark:border-zinc-800 pt-4">
+                <div className="flex flex-col sm:flex-row justify-between sm:items-center gap-4 mt-2 border-t border-white/10 pt-4">
                   <div className="flex flex-col gap-2">
                     <label className="text-white/80 text-sm font-semibold uppercase tracking-wider">{t.options}</label>
                     <div className="flex flex-col gap-2 text-sm text-white">
