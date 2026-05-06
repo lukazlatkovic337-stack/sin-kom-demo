@@ -114,7 +114,7 @@ const RoomsCarousel = () => {
             {/* Slight dark overlay so the title text stays readable */}
             <div className="absolute inset-0 bg-black/20" />
 
-            <div className="absolute bottom-6 left-6 text-white text-xl font-bold drop-shadow-md">
+            <div className="absolute top-6 left-6 text-white text-xl font-bold drop-shadow-md">
               {room.title}
             </div>
           </div>
