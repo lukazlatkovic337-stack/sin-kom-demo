@@ -46,9 +46,10 @@ export default function Surroundings() {
       description: t.zavojskoDescription || "Smešteno u srcu Stare planine, Zavojsko jezero je raj za ribolovce, kupače i ljubitelje prirode. Njegova smaragdna voda i strmi obronci čine ga jednim od najlepših veštačkih jezera u regionu.",
       image: "/images/Sin-kom/surroundings/zavojsko-jezero-home.jpg",
       gallery: [
-        { src: "/images/Sin-kom/zavojsko-jezero/kozji-kamen.jpg", name: "Vidikovac Kozji Kamen", description: "Vidikovac Kozji Kamen pruža spektakularan pogled na Zavojsko jezero i okolne planine." },
-        { src: "/images/Sin-kom/zavojsko-jezero/vidikovac-smilovica.jpg", name: "Vidikovac Smilovica", description: "Vidikovac Smilovica – pogled na Zavojsko jezero koji ostavlja bez daha!" },
-        { src: "/images/Sin-kom/zavojsko-jezero/selo-gostusa.jpg", name: "Selo Gostuša", description: "U podnožju Stare planine, ispod prostrane visoravni “Belan”, u blizini Zavojskog jezera, udaljeno 25 kilometara severoistočno od Pirota nalazi se selo Gostuša." },
+        { src: "/images/Sin-kom/zavojsko-jezero/kozji-kamen.jpg", name: t.kozjiKamenName || "Vidikovac Kozji Kamen", description: t.kozjiKamenDesc || "Vidikovac Kozji Kamen pruža spektakularan pogled na Zavojsko jezero i okolne planine." },
+        { src: "/images/Sin-kom/zavojsko-jezero/vidikovac-smilovica.jpg", name: t.smilovicaName || "Vidikovac Smilovica", description: t.smilovicaDesc || "Vidikovac Smilovica – pogled na Zavojsko jezero koji ostavlja bez daha!" },
+        { src: "/images/Sin-kom/zavojsko-jezero/selo-gostusa.jpg", name: t.gostusaName || "Selo Gostuša", description: t.gostusaDesc || "U podnožju Stare planine, ispod prostrane visoravni “Belan”, u blizini Zavojskog jezera, udaljeno 25 kilometara severoistočno od Pirota nalazi se selo Gostuša." },
+
         
       ]
     },

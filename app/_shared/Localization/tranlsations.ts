@@ -176,6 +176,12 @@ export const translations = {
       bookingBenefit2: "- Early Check-In and/or Late Check-Out",
       phoneBooking: "Phone Booking",
       konfContact: "Contact us for a personalized offer",
+      kozjiKamenName: "Kozji Kamen",
+      kozjiKamenDesc: "The Kozji Kamen viewpoint offers a spectacular view of Zavoj Lake and the surrounding mountains.",
+      smilovicaName: "Smilovica Viewpoint",
+      smilovicaDesc: "The Smilovica viewpoint offers a breathtaking view of Zavoj Lake!",
+      gostusaName: "Gostuša Village",
+      gostusaDesc: "At the foot of Stara Planina, below the vast Belan plateau, near Zavoj Lake, 25 kilometers northeast of Pirot, lies the village of Gostuša."
   
     },
   "latn-rs": {
@@ -349,7 +355,13 @@ export const translations = {
     bookingBenefit1: "- Popust od 10% za individualne rezervacije",
     bookingBenefit2: "- Rani Check-In i/ili kasniji Check-Out",
     phoneBooking: "Rezervacija telefonom",
-    konfContact: "Kontaktirajte nas za personalizovanu ponudu"
+    konfContact: "Kontaktirajte nas za personalizovanu ponudu",
+    kozjiKamenName: "Kozji kamen",
+    kozjiKamenDesc: "Vidikovac Kozji Kamen pruža spektakularan pogled na Zavojsko jezero i okolne planine.",
+    smilovicaName: "Vidikovac Smilovica",
+    smilovicaDesc: "Vidikovac Smilovica – pogled na Zavojsko jezero koji ostavlja bez daha!",
+    gostusaName: "Selo Gostuša",
+    gostusaDesc: "U podnožju Stare planine, ispod prostrane visoravni “Belan”, u blizini Zavojskog jezera, udaljeno 25 kilometara severoistočno od Pirota nalazi se selo Gostuša."
 
   },
   "bg-bg": {
@@ -523,7 +535,13 @@ export const translations = {
     bookingBenefit1: "- 10% скидка за индивидуални бронирования",
     bookingBenefit2: "- Ранен заезд и/или късен изход",
     phoneBooking: "Брониране по телефон",
-    konfContact: "Свържете се с нас за персонализирано предложение"
+    konfContact: "Свържете се с нас за персонализирано предложение",
+    kozjiKamenName: "Козък камък",
+    kozjiKamenDesc: "От панорамната площадка „Козък камък“ се разкрива зашеметяваща гледка към езерото Завойско и околните планини.",
+    smilovicaName: "Панорамна площадка Смиловица",
+    smilovicaDesc: "Панорамната площадка Смиловица – гледка към езерото Завойско, която ще ви остави без дъх!",
+    gostusaName: "Село Гостуша",
+    gostusaDesc: "В подножието на Стара планина, под обширната равнина „Белан“, в близост до езерото Завойско, на 25 километра североизточно от Пирот, се намира село Гостуша."
   },
 };
 
