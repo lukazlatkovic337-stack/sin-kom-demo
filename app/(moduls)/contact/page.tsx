@@ -1,6 +1,7 @@
 "use client";
 
 import { FC, useState } from "react";
+import { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { sendContactEmail } from "./actions";
 import { useLanguage } from "@/app/_shared/Localization/LanguageContext";
@@ -16,6 +17,7 @@ export type FormData = {
   message: string;
 };
 
+
 const Contact: FC = () => {
   const {
     register,
@@ -25,6 +27,10 @@ const Contact: FC = () => {
   } = useForm<FormData>();
   const { t } = useLanguage();
   const [status, setStatus] = useState<{ type: 'success' | 'error', msg: string } | null>(null);
+
+  useEffect(() => {
+    document.title = "Kontakt - Hotel Sin-Kom Pirot";
+  }, []);
 
   async function onSubmit(data: FormData) {
     setStatus(null);

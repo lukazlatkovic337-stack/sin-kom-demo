@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useState, TouchEvent } from "react";
+import { useState, TouchEvent, useEffect } from "react";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import RoomService from "./RoomService/RoomService";
@@ -13,6 +13,7 @@ import KinoKonferenc from "@/public/images/konferencijska-kino.png";
 import KoktelKonferenc from "@/public/images/konferencijska-koktel.png";
 import { ROOMS } from "@/app/_shared/Localization/rooms";
 
+
 export default function Serices() {
   const { t } = useLanguage();
 
@@ -22,6 +23,10 @@ export default function Serices() {
   const [selectedConfType, setSelectedConfType] = useState<"kino" | "koktel">(
     "kino",
   );
+
+   useEffect(() => {
+    document.title = "Usluge hotela - Hotel Sin-Kom";
+  }, []);
 
   const conferenceImages = [
     "/images/Sin-kom/konferencijska-sala/slika1.JPG",

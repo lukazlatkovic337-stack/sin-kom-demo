@@ -1,10 +1,15 @@
 "use client";
 
 import { useHotelData } from "@/app/_shared/Localization/useHotelData";
+import { useEffect } from "react";
 import Image from "next/image";
 
 export default function AboutUs() {
   const { rooms, conference, reception } = useHotelData();
+
+  useEffect(() => {
+      document.title = "Galerija - Hotel Sin-Kom Pirot";
+    }, []);
 
   return (
     <div>

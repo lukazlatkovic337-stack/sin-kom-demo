@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { useLanguage } from "../../_shared/Localization/LanguageContext";
 import "../../style.css";
@@ -9,6 +9,10 @@ export default function Surroundings() {
   const { t } = useLanguage();
   const router = useRouter();
   const [selectedLocation, setSelectedLocation] = useState<number | null>(null);
+
+  useEffect(() => {
+    document.title = "Okolina Pirota - Hotel Sin-Kom";
+  }, []);
 
   const locations = [
     {

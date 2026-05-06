@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import SwiperMain from "./SwiperMain/SwiperMain";
 
@@ -19,6 +19,10 @@ import { useInView } from "./_shared/hooks/useInView";
 export default function Home() {
   const { t } = useLanguage();
   const [isExpanded, setIsExpanded] = useState(false);
+
+  useEffect(() => {
+    document.title = "Garni Hotel Sin-Kom - Pirot";
+  }, []);
 
   // Refs for scroll animations
   const [heroRef, heroInView] = useInView<HTMLDivElement>({ threshold: 0.1 });

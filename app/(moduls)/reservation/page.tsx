@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, FormEvent } from "react";
+import { useState, FormEvent, useEffect } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { useLanguage } from "@/app/_shared/Localization/LanguageContext";
@@ -26,6 +26,7 @@ interface RoomSelection {
   dateRange: [Date | null, Date | null];
 }
 
+
 export default function Reservation() {
   // Pretpostavljamo da useLanguage vraća i trenutni kod jezika
   const { t, language } = useLanguage() as any; 
@@ -42,6 +43,10 @@ export default function Reservation() {
       dateRange: [null, null],
     },
   ]);
+
+  useEffect(() => {
+    document.title = "Rezervacija - Hotel Sin-Kom Pirot";
+  }, []);
 
   const [userInfo, setUserInfo] = useState({
     fullName: "",

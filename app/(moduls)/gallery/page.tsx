@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import { useHotelData } from "@/app/_shared/Localization/useHotelData";
 import { useLanguage } from "@/app/_shared/Localization/LanguageContext";
@@ -16,6 +16,10 @@ const CustomCarousel = ({
   const [currentIndex, setCurrentIndex] = useState(0);
   const [touchStart, setTouchStart] = useState<number | null>(null);
   const [touchEnd, setTouchEnd] = useState<number | null>(null);
+
+  useEffect(() => {
+      document.title = "Galerija - Hotel Sin-Kom Pirot";
+    }, []);
 
   // Minimum swipe distance (in pixels) to trigger a slide change
   const minSwipeDistance = 50;
