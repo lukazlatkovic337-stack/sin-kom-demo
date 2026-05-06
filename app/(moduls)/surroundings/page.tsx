@@ -23,6 +23,8 @@ export default function Surroundings() {
         { src: "/images/Sin-kom/stara-planina/babin-zub.jpg", name: "Babin Zub", description: "Babin zub je jedan od vrhova planinskog masiva, Stara planina.  Nalazi se na 1785 m/nv, odakle počinje uspon na Midžor. Zapadna strana je karakteristična po vertikalnim odsecima stena." },
         { src: "/images/Sin-kom/stara-planina/midzor-vrh.jpg", name: "Vrh Midžor", description: "Najviša tačka centralne Srbije (2169m)." },
         { src: "/images/Sin-kom/stara-planina/stara-planina-skijanje.jpg", name: "Ski centar Stara Planina", description: "Ski centar na Staroj Planini je pravo mesto za sve ljubitelje skijanja i zimskog uživanja." },
+        { src: "/images/Sin-kom/stara-planina/jelovicko-vrelo.jpg", name: "Jelovičko vrelo", description: "Jelovičko vrelo je prirodno vrelo koje se nalazi u blizini Stare planine." },
+        { src: "/images/Sin-kom/stara-planina/rosomacki-lonci.jpg", name: "Rosomački lonci", description: "Rosomački lonci ili slavinjsko grlo predstavlja klisuru rečne doline Rosomačke reke. Nalazi se u blizini  sela Slavinja koje je od Pirota udaljeno 30 km.Do kanjona se dolazi  iz centra sela, za oko 15 minuta laganog hoda. Staza je obeležena i prolazi kroz jedinstveni reljef ovog dela Stare planine." },
         
       ]
     },

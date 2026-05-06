@@ -94,7 +94,7 @@ export default function Home() {
             </div>
             <div className="icons-with-description">
               <WifiIcon style={{ fontSize: 80 }} />
-              <span>{t.wifi}</span>
+              <span>{t.wirelessInternet2}</span>
             </div>
           </div>
         </div>

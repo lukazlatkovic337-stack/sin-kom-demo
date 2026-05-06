@@ -100,7 +100,8 @@ export default function Serices() {
             </h2>
             <div className="text-black/70 text-lg leading-relaxed max-w-4xl text-center mx-auto">
               <p>{t.restaurantBreakfastInfo}</p>
-              <p className="mt-2 font-medium">- {t.restaurantBreakfastOption}</p>
+              <p className="mt-2 font-medium">- {t.restaurantBreakfastOption1}</p>
+              <p className="mt-2 font-medium">- {t.restaurantBreakfastOption2}</p>
             </div>
             <div className="relative w-full mt-4 overflow-hidden h-[200px] rounded-2xl">
               <img 
@@ -220,52 +221,11 @@ export default function Serices() {
               )}
             </div>
           </div>
-
-          {/* Pricing Section */}
-          <div className="mt-8 w-full max-w-5xl mx-auto">
-            <h3 className="text-xl font-bold text-[#464545] mb-6 text-center md:text-left">
-              <p>{t.pricing}</p>
+          <div className="mt-12 w-full text-center">
+            <h3 className="text-2xl font-bold text-[#464545] uppercase tracking-widest">
+              {t.konfContact}
             </h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {/* Option 1: Short term */}
-              <div className="bg-white/40 rounded-2xl p-6 flex flex-col items-center justify-center shadow-sm border border-white/60 hover:bg-white/60 transition-all">
-                <span className="text-sm uppercase tracking-wider font-semibold text-[#464545]/70 mb-2">
-                <p>{t.upToHours}</p>
-                </span>
-                <span className="text-4xl font-extrabold text-[#464545]">
-                  1500 <span className="text-xl font-medium">RSD</span>
-                </span>
-                <span className="text-sm mt-2 text-center text-[#464545]">
-                  <p>{t.perHour}</p>
-                </span>
-              </div>
-
-              {/* Option 2: Long term */}
-              <div className="bg-white/40 rounded-2xl p-6 flex flex-col items-center justify-center shadow-sm border border-white/60 hover:bg-white/60 transition-all">
-                <span className="text-sm uppercase tracking-wider font-semibold text-[#464545]/70 mb-2">
-                  <p>{t.moreHours}</p>
-                </span>
-                <span className="text-4xl font-extrabold text-[#464545]">
-                  1200 <span className="text-xl font-medium">RSD</span>
-                </span>
-                <span className="text-sm mt-2 text-center text-[#464545]">
-                  <p>{t.perHour}</p>
-                </span>
-              </div>
-
-              {/* Option 3: Guests */}
-              <div className="bg-[#464545] text-[#e0d9cd] rounded-2xl p-6 flex flex-col items-center justify-center shadow-md hover:bg-[#383737] transition-all transform hover:-translate-y-1">
-                <span className="text-sm uppercase tracking-wider font-semibold text-[#e0d9cd]/80 mb-2">
-                  <h3>{t.hotelGuests}</h3>
-                </span>
-                <span className="text-4xl font-extrabold text-white">
-                  1000 <span className="text-xl font-medium">RSD</span>
-                </span>
-                <span className="text-sm mt-2 text-center text-[#e0d9cd]/90">
-                  <h3>{t.perHour}</h3>
-                </span>
-              </div>
-            </div>
+          </div>
 
             {/* Contact Button */}
             <div className="mt-10 flex justify-center">
@@ -279,6 +239,5 @@ export default function Serices() {
           </div>
         </div>
       </div>
-    </div>
   );
 }

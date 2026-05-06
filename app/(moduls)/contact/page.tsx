@@ -47,19 +47,70 @@ const Contact: FC = () => {
   return (
     <div className="min-h-screen bg-zinc-50 pt-32 pb-20 px-4 md:px-10">
       <div className="max-w-7xl mx-auto">
-        <div className="flex flex-col lg:flex-row gap-16">
-          
-          {/* Left Side: Contact Info */}
-          <div className="lg:w-1/2 flex flex-col gap-10">
-            <div className="flex flex-col gap-4">
-              <h1 className="contact-heading text-5xl md:text-7xl tracking-tighter">
-                {t.contact}
-              </h1>
-              <p className="text-zinc-600 text-lg italic max-w-md leading-relaxed">
-                {t.contactPageSubtitle}
-              </p>
-            </div>
+        {/* Naslovna sekcija pomerena iznad forme */}
+        <div className="flex flex-col gap-4 mb-16 text-center lg:text-left">
+          <h1 className="contact-heading text-5xl md:text-7xl tracking-tighter">
+            {t.contact}
+          </h1>
+          <p className="text-zinc-600 text-lg italic max-w-md leading-relaxed mx-auto lg:mx-0">
+            {t.contactPageSubtitle}
+          </p>
+        </div>
 
+        <div className="flex flex-col lg:flex-row gap-16">
+
+          {/* Left Side: Form */}
+          <div className="lg:w-1/2">
+            <form className="contact-form-modern" onSubmit={handleSubmit(onSubmit)}>
+              <div className="flex flex-col gap-6">
+                <div className="flex flex-col gap-2">
+                  <label className="text-xs font-bold uppercase tracking-widest text-[#EACF78]">{t.fullName}</label>
+                  <input
+                    type="text"
+                    className="form-input"
+                    placeholder="Unesite vaše ime i prezime"
+                    {...register("name", { required: true })}
+                  />
+                </div>
+                
+                <div className="flex flex-col gap-2">
+                  <label className="text-xs font-bold uppercase tracking-widest text-[#EACF78]">{t.emailAddress}</label>
+                  <input
+                    type="email"
+                    className="form-input"
+                    placeholder="email@example.com"
+                    {...register("email", { required: true })}
+                  />
+                </div>
+
+                <div className="flex flex-col gap-2">
+                  <label className="text-xs font-bold uppercase tracking-widest text-[#EACF78]">{t.messageLabel}</label>
+                  <textarea
+                    rows={6}
+                    className="form-input resize-none"
+                    placeholder={t.messagePlaceholder}
+                    {...register("message", { required: true })}
+                  ></textarea>
+                </div>
+
+                {status && (
+                  <div className={`p-4 text-sm italic ${status.type === 'success' ? 'text-green-400 bg-green-400/10' : 'text-red-400 bg-red-400/10'}`}>
+                    {status.msg}
+                  </div>
+                )}
+
+                <button 
+                  disabled={isSubmitting} 
+                  className="custom-button-reserve w-full py-4 text-center mt-4"
+                >
+                  {isSubmitting ? "..." : t.contactButton}
+                </button>
+              </div>
+            </form>
+          </div>
+          
+          {/* Right Side: Contact Info */}
+          <div className="lg:w-1/2 flex flex-col gap-10">
             <div className="flex flex-col gap-8">
               <div className="flex items-start gap-5 group">
                 <div className="w-12 h-12 flex items-center justify-center bg-zinc-100 border border-zinc-200 group-hover:border-[#7c6648] transition-all text-[#7c6648]">
@@ -119,56 +170,6 @@ const Contact: FC = () => {
                 loading="lazy"
               ></iframe>
             </div>
-          </div>
-          
-          {/* Right Side: Form */}
-          <div className="lg:w-1/2">
-            <form className="contact-form-modern" onSubmit={handleSubmit(onSubmit)}>
-              <div className="flex flex-col gap-6">
-                <div className="flex flex-col gap-2">
-                  <label className="text-xs font-bold uppercase tracking-widest text-[#EACF78]">{t.fullName}</label>
-                  <input
-                    type="text"
-                    className="form-input"
-                    placeholder="Unesite vaše ime i prezime"
-                    {...register("name", { required: true })}
-                  />
-                </div>
-                
-                <div className="flex flex-col gap-2">
-                  <label className="text-xs font-bold uppercase tracking-widest text-[#EACF78]">{t.emailAddress}</label>
-                  <input
-                    type="email"
-                    className="form-input"
-                    placeholder="email@example.com"
-                    {...register("email", { required: true })}
-                  />
-                </div>
-
-                <div className="flex flex-col gap-2">
-                  <label className="text-xs font-bold uppercase tracking-widest text-[#EACF78]">{t.messageLabel}</label>
-                  <textarea
-                    rows={6}
-                    className="form-input resize-none"
-                    placeholder={t.messagePlaceholder}
-                    {...register("message", { required: true })}
-                  ></textarea>
-                </div>
-
-                {status && (
-                  <div className={`p-4 text-sm italic ${status.type === 'success' ? 'text-green-400 bg-green-400/10' : 'text-red-400 bg-red-400/10'}`}>
-                    {status.msg}
-                  </div>
-                )}
-
-                <button 
-                  disabled={isSubmitting} 
-                  className="custom-button-reserve w-full py-4 text-center mt-4"
-                >
-                  {isSubmitting ? "..." : t.contactButton}
-                </button>
-              </div>
-            </form>
           </div>
 
         </div>
