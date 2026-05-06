@@ -9,9 +9,20 @@ export default function Surroundings() {
   const { t } = useLanguage();
   const router = useRouter();
   const [selectedLocation, setSelectedLocation] = useState<number | null>(null);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
     document.title = "Okolina Pirota - Hotel Sin-Kom";
+
+    const handleScroll = () => {
+      // Adjust this threshold based on when your header actually fades out
+      setIsScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
   const locations = [
@@ -88,7 +99,9 @@ export default function Surroundings() {
       {selectedLocation !== null && (
         <button
           onClick={handleBack}
-          className="fixed top-48 left-4 md:left-16 z-50 flex items-center gap-3 text-white/70 hover:text-[#fcd949] transition-all duration-300 group"
+          className={`fixed left-4 md:left-16 z-50 flex items-center gap-3 text-white/70 hover:text-[#fcd949] transition-all duration-500 group ${
+            isScrolled ? "top-10" : "top-48"
+          }`}
         >
           <div className="w-10 h-10 flex items-center justify-center bg-white/5 border border-white/10 group-hover:border-[#fcd949] transition-all">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5">
