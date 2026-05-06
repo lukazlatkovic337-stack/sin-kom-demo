@@ -152,8 +152,8 @@ export default function Reservation() {
   };
 
   return (
-    <div className="flex flex-col min-h-screen w-full items-center justify-center bg-zinc-950 font-sans pt-10 pb-10">
-      <main className="flex flex-1 w-full max-w-4xl flex-col items-center justify-start pt-10 pb-20 px-4 md:px-16 bg-white/5 backdrop-blur-xl rounded-[2rem] border border-white/10 shadow-2xl sm:items-start">
+    <div className="flex flex-col min-h-screen w-full items-center justify-center bg-zinc-950 text-white font-sans pt-10 pb-10">
+      <main className="flex flex-1 w-full max-w-4xl flex-col items-center justify-start pt-10 pb-20 px-4 md:px-16 bg-zinc-900/40 backdrop-blur-xl rounded-[2rem] border border-white/10 shadow-2xl sm:items-start">
         <div className="flex flex-col items-center sm:items-start gap-4 mb-12 w-full">
           <div className="flex flex-col md:flex-row items-center md:items-end gap-6 md:justify-between w-full">
             <h1 className="reservationTitle text-4xl md:text-6xl font-normal text-white text-center tracking-normal">
@@ -176,7 +176,7 @@ export default function Reservation() {
             {rooms.map((room, index) => (
               <div 
                 key={room.id}
-                className="p-6 bg-white/5 backdrop-blur-xl rounded-[2rem] border border-white/10 hover:border-[#fcd949]/50 transition-all duration-500 shadow-2xl flex flex-col gap-6 relative"
+                className="p-6 bg-zinc-900/60 backdrop-blur-xl rounded-[2rem] border border-white/10 hover:border-[#fcd949]/50 transition-all duration-500 shadow-2xl flex flex-col gap-6 relative"
               >
                 {index > 0 && (
                   <button
@@ -198,7 +198,7 @@ export default function Reservation() {
                       type="text"
                       disabled
                       value={t.bedAndBreakfast}
-                      className="p-3 border rounded-lg bg-white/10 border-white/20 text-white/70 placeholder-white/50 focus:border-[#fcd949] focus:ring-1 focus:ring-[#fcd949] transition-colors duration-200 cursor-not-allowed"
+                      className="p-3 border rounded-lg bg-zinc-800 border-white/20 text-white/70 placeholder-white/50 focus:border-[#fcd949] focus:ring-1 focus:ring-[#fcd949] transition-colors duration-200 cursor-not-allowed appearance-none"
                     />
                   </div>
 
@@ -211,7 +211,7 @@ export default function Reservation() {
                       onChange={(e) =>
                         handleRoomChange(room.id, "roomId", e.target.value)
                       }
-                      className="p-3 border rounded-lg bg-white/10 border-white/20 text-white focus:border-[#fcd949] focus:ring-1 focus:ring-[#fcd949] transition-colors duration-200 outline-none"
+                      className="p-3 border rounded-lg bg-zinc-800 border-white/20 text-white focus:border-[#fcd949] focus:ring-1 focus:ring-[#fcd949] transition-colors duration-200 outline-none appearance-none"
                     >
                       {hotelRooms.map((r) => (
                         <option key={r.id} value={r.id} className="bg-zinc-900 text-white">
@@ -230,7 +230,7 @@ export default function Reservation() {
                       onChange={(e) =>
                         handleRoomChange(room.id, "persons", e.target.value)
                       }
-                      className="p-3 border rounded-lg bg-white/10 border-white/20 text-white focus:border-[#fcd949] focus:ring-1 focus:ring-[#fcd949] transition-colors duration-200 outline-none"
+                      className="p-3 border rounded-lg bg-zinc-800 border-white/20 text-white focus:border-[#fcd949] focus:ring-1 focus:ring-[#fcd949] transition-colors duration-200 outline-none appearance-none"
                     >
                       <option value="1" className="bg-zinc-900 text-white">
                         {t.onePerson}
@@ -256,7 +256,7 @@ export default function Reservation() {
                       }
                       isClearable={true}
                       placeholderText={t.selectPeriodPlaceholder || "Od - Do"}
-                      className="w-full p-3 border rounded-lg bg-white/10 border-white/20 text-white placeholder-white/50 focus:border-[#fcd949] focus:ring-1 focus:ring-[#fcd949] transition-colors duration-200 outline-none"
+                      className="w-full p-3 border rounded-lg bg-zinc-800 border-white/20 text-white placeholder-white/50 focus:border-[#fcd949] focus:ring-1 focus:ring-[#fcd949] transition-colors duration-200 outline-none"
                     />
                   </div>
                 </div>
@@ -321,7 +321,7 @@ export default function Reservation() {
           </div>
 
           {/* Personal Information */}
-          <div className="p-6 bg-white/5 backdrop-blur-xl rounded-[2rem] border border-white/10 hover:border-[#fcd949]/50 transition-all duration-500 shadow-2xl">
+          <div className="p-6 bg-zinc-900/60 backdrop-blur-xl rounded-[2rem] border border-white/10 hover:border-[#fcd949]/50 transition-all duration-500 shadow-2xl">
             <h2 className="text-2xl md:text-3xl font-bold text-[#fcd949] uppercase tracking-widest mb-6">{t.personalData}</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <input
@@ -331,7 +331,7 @@ export default function Reservation() {
                 placeholder={t.fullName}
                 value={userInfo.fullName}
                 onChange={handleUserInfoChange}
-                className="p-3 border rounded-lg bg-white/10 border-white/20 text-white placeholder-white/50 focus:border-[#fcd949] focus:ring-1 focus:ring-[#fcd949] transition-colors duration-200 outline-none w-full"
+                className="p-3 border rounded-lg bg-zinc-800 border-white/20 text-white placeholder-white/50 focus:border-[#fcd949] focus:ring-1 focus:ring-[#fcd949] transition-colors duration-200 outline-none w-full"
               />
               <input
                 required
@@ -340,7 +340,7 @@ export default function Reservation() {
                 placeholder={t.mobilePhone}
                 value={userInfo.phone}
                 onChange={handleUserInfoChange}
-                className="p-3 border rounded-lg bg-white/10 border-white/20 text-white placeholder-white/50 focus:border-[#fcd949] focus:ring-1 focus:ring-[#fcd949] transition-colors duration-200 outline-none w-full"
+                className="p-3 border rounded-lg bg-zinc-800 border-white/20 text-white placeholder-white/50 focus:border-[#fcd949] focus:ring-1 focus:ring-[#fcd949] transition-colors duration-200 outline-none w-full"
               />
               <input
                 required
@@ -349,7 +349,7 @@ export default function Reservation() {
                 placeholder={t.emailAddress}
                 value={userInfo.email}
                 onChange={handleUserInfoChange}
-                className="p-3 border rounded-lg bg-white/10 border-white/20 text-white placeholder-white/50 focus:border-[#fcd949] focus:ring-1 focus:ring-[#fcd949] transition-colors duration-200 outline-none w-full"
+                className="p-3 border rounded-lg bg-zinc-800 border-white/20 text-white placeholder-white/50 focus:border-[#fcd949] focus:ring-1 focus:ring-[#fcd949] transition-colors duration-200 outline-none w-full"
               />
               <input
                 required
@@ -358,7 +358,7 @@ export default function Reservation() {
                 placeholder={t.address}
                 value={userInfo.address}
                 onChange={handleUserInfoChange}
-                className="p-3 border rounded-lg bg-white/10 border-white/20 text-white placeholder-white/50 focus:border-[#fcd949] focus:ring-1 focus:ring-[#fcd949] transition-colors duration-200 outline-none w-full"
+                className="p-3 border rounded-lg bg-zinc-800 border-white/20 text-white placeholder-white/50 focus:border-[#fcd949] focus:ring-1 focus:ring-[#fcd949] transition-colors duration-200 outline-none w-full"
               />
               <input
                 required
@@ -367,7 +367,7 @@ export default function Reservation() {
                 placeholder={t.city}
                 value={userInfo.city}
                 onChange={handleUserInfoChange}
-                className="p-3 border rounded-lg bg-white/10 border-white/20 text-white placeholder-white/50 focus:border-[#fcd949] focus:ring-1 focus:ring-[#fcd949] transition-colors duration-200 outline-none w-full"
+                className="p-3 border rounded-lg bg-zinc-800 border-white/20 text-white placeholder-white/50 focus:border-[#fcd949] focus:ring-1 focus:ring-[#fcd949] transition-colors duration-200 outline-none w-full"
               />
               <input
                 required
@@ -376,7 +376,7 @@ export default function Reservation() {
                 placeholder={t.country}
                 value={userInfo.country}
                 onChange={handleUserInfoChange}
-                className="p-3 border rounded-lg bg-white/10 border-white/20 text-white placeholder-white/50 focus:border-[#fcd949] focus:ring-1 focus:ring-[#fcd949] transition-colors duration-200 outline-none w-full"
+                className="p-3 border rounded-lg bg-zinc-800 border-white/20 text-white placeholder-white/50 focus:border-[#fcd949] focus:ring-1 focus:ring-[#fcd949] transition-colors duration-200 outline-none w-full"
               />
             </div>
           </div>
