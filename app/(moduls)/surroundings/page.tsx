@@ -68,7 +68,7 @@ export default function Surroundings() {
       image: "/images/Sin-kom/jerma/kanjon-jerme.jpg",
       gallery: [
         { src: "/images/Sin-kom/jerma/manastir-poganovo.jpg", name: t.poganovoName || "Manastir Poganovo", description: t.poganovoDesc || "" },
-        { src: "/images/Sin-kom/jerma/manastir-sukovo.jpg", name: t.sukovoName || "Manastir Sukovo", description: t.sukovoDesc || "" },
+        { src: "/images/Sin-kom/jerma/manastir-sukovo.JPG", name: t.sukovoName || "Manastir Sukovo", description: t.sukovoDesc || "" },
         { src: "/images/Sin-kom/jerma/banja-zvonce.jpg", name: t.zvonackaBanjaName || "Zvonačka banja", description: t.zvonackaBanjaDesc || "" },
       ]
     }
