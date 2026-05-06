@@ -6,6 +6,8 @@ import "react-datepicker/dist/react-datepicker.css";
 import { useLanguage } from "@/app/_shared/Localization/LanguageContext";
 import RemoveCircleOutlineIcon from "@mui/icons-material/Delete";
 import AddCircleOutlineIcon from "@mui/icons-material/Add";
+import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 import "../../style.css";
 import { useHotelData } from "@/app/_shared/Localization/useHotelData";
 import { sendReservationEmail } from "./actions";
@@ -175,6 +177,22 @@ export default function Reservation() {
           <div className="w-24 h-1 bg-[#fcd949]"></div>
         </div>
 
+        {/* Benefits and Phone Booking Section */}
+        <div className="flex flex-col items-center text-center w-full mb-12 gap-2">
+          <h2 className="text-2xl md:text-3xl font-bold text-[#fcd949] uppercase tracking-widest mb-2">
+            {t.bookingBenefits}
+          </h2>
+          <p className="text-white/80 text-base md:text-lg">{t.bookingBenefit1}</p>
+          <p className="text-white/80 text-base md:text-lg">{t.bookingBenefit2}</p>
+          
+          <h2 className="text-2xl md:text-3xl font-bold text-[#fcd949] uppercase tracking-widest mt-8 mb-2">
+            {t.phoneBooking}
+          </h2>
+          <a href="tel:+381638513631" className="text-white text-2xl md:text-3xl font-bold hover:text-[#fcd949] transition-colors duration-300">
+            +381 63 851 3631
+          </a>
+        </div>
+
         <form className="w-full flex flex-col gap-8" onSubmit={handleSubmit}>
           {/* Dynamic Rooms Selection */}
           <div className="flex flex-col gap-6">
@@ -211,58 +229,68 @@ export default function Reservation() {
                     <label className="text-white/80 text-sm font-semibold uppercase tracking-wider">
                       {t.roomType}
                     </label>
-                    <select
-                      value={room.roomId}
-                      onChange={(e) =>
-                        handleRoomChange(room.id, "roomId", e.target.value)
-                      }
-                      className="p-3 border rounded-lg bg-zinc-800 border-white/20 text-white focus:border-[#fcd949] focus:ring-1 focus:ring-[#fcd949] transition-colors duration-200 outline-none appearance-none"
-                    >
-                      {hotelRooms.map((r) => (
-                        <option key={r.id} value={r.id} className="bg-zinc-900 text-white">
-                          {r.name}
-                        </option>
-                      ))}
-                    </select>
+                    <div className="relative">
+                      <select
+                        value={room.roomId}
+                        onChange={(e) =>
+                          handleRoomChange(room.id, "roomId", e.target.value)
+                        }
+                        className="w-full p-3 pr-10 border rounded-lg bg-zinc-800 border-white/20 text-white focus:border-[#fcd949] focus:ring-1 focus:ring-[#fcd949] transition-colors duration-200 outline-none appearance-none cursor-pointer"
+                      >
+                        {hotelRooms.map((r) => (
+                          <option key={r.id} value={r.id} className="bg-zinc-900 text-white">
+                            {r.name}
+                          </option>
+                        ))}
+                      </select>
+                      <KeyboardArrowDownIcon className="absolute right-3 top-1/2 -translate-y-1/2 text-white/50 pointer-events-none" />
+                    </div>
                   </div>
 
                   <div className="flex flex-col gap-2">
                     <label className="text-white/80 text-sm font-semibold uppercase tracking-wider">
                       {t.numberOfPersons}
                     </label>
-                    <select
-                      value={room.persons}
-                      onChange={(e) =>
-                        handleRoomChange(room.id, "persons", e.target.value)
-                      }
-                      className="p-3 border rounded-lg bg-zinc-800 border-white/20 text-white focus:border-[#fcd949] focus:ring-1 focus:ring-[#fcd949] transition-colors duration-200 outline-none appearance-none"
-                    >
-                      <option value="1" className="bg-zinc-900 text-white">
-                        {t.onePerson}
-                      </option>
-                      <option value="2" className="bg-zinc-900 text-white">
-                        {t.twoPersons}
-                      </option>
-                    </select>
+                    <div className="relative">
+                      <select
+                        value={room.persons}
+                        onChange={(e) =>
+                          handleRoomChange(room.id, "persons", e.target.value)
+                        }
+                        className="w-full p-3 pr-10 border rounded-lg bg-zinc-800 border-white/20 text-white focus:border-[#fcd949] focus:ring-1 focus:ring-[#fcd949] transition-colors duration-200 outline-none appearance-none cursor-pointer"
+                      >
+                        <option value="1" className="bg-zinc-900 text-white">
+                          {t.onePerson}
+                        </option>
+                        <option value="2" className="bg-zinc-900 text-white">
+                          {t.twoPersons}
+                        </option>
+                      </select>
+                      <KeyboardArrowDownIcon className="absolute right-3 top-1/2 -translate-y-1/2 text-white/50 pointer-events-none" />
+                    </div>
                   </div>
 
                   <div className="flex flex-col gap-2">
                     <label className="text-white/80 text-sm font-semibold uppercase tracking-wider">
                       {t.selectPeriod}
                     </label>
-                    <DatePicker
-                      locale={language} // Postavlja jezik kalendara (npr. 'latn-rs')
-                      dateFormat="dd-MMMM-yyyy" // Format: 13-januar-2025
-                      selectsRange={true}
-                      startDate={room.dateRange[0] || undefined}
-                      endDate={room.dateRange[1] || undefined}
-                      onChange={(update) =>
-                        handleRoomChange(room.id, "dateRange", update)
-                      }
-                      isClearable={true}
-                      placeholderText={t.selectPeriodPlaceholder || "Od - Do"}
-                      className="w-full p-3 border rounded-lg bg-zinc-800 border-white/20 text-white placeholder-white/50 focus:border-[#fcd949] focus:ring-1 focus:ring-[#fcd949] transition-colors duration-200 outline-none"
-                    />
+                    <div className="relative">
+                      <CalendarMonthIcon className="absolute left-3 top-1/2 -translate-y-1/2 text-[#fcd949] text-xl z-10 pointer-events-none" />
+                      <DatePicker
+                        locale={language} // Postavlja jezik kalendara (npr. 'latn-rs')
+                        dateFormat="dd-MMMM-yyyy" // Format: 13-januar-2025
+                        selectsRange={true}
+                        startDate={room.dateRange[0] || undefined}
+                        endDate={room.dateRange[1] || undefined}
+                        onChange={(update) =>
+                          handleRoomChange(room.id, "dateRange", update)
+                        }
+                        isClearable={true}
+                        placeholderText={t.selectPeriodPlaceholder || "Od - Do"}
+                        className="w-full p-3 pl-11 border rounded-lg bg-zinc-800 border-white/20 text-white placeholder-white/50 focus:border-[#fcd949] focus:ring-1 focus:ring-[#fcd949] transition-colors duration-200 outline-none"
+                        wrapperClassName="w-full"
+                      />
+                    </div>
                   </div>
                 </div>
 

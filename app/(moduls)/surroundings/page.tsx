@@ -57,7 +57,7 @@ export default function Surroundings() {
       gallery: [
         { src: "/images/Sin-kom/zanimljivosti-u-gradu/tvrdjava-pirot.jpg", name: t.kaleName || "Tvrđava Kale", description: t.kaleDesc || "Srednjovekovni grad, ponos pirotske istorije." },
         { src: "/images/Sin-kom/zanimljivosti-u-gradu/muzej-pirot.JPG", name: t.muzejName || "Muzej Ponišavlja", description: t.muzejDesc || "Autentična arhitektura i bogata riznica." },
-        { src: "/images/Sin-kom/zanimljivosti-u-gradu/pirotski-kej-zalazak.jpg", name: t.kejName || "Pirotski Kej", description: t.kejDesc || "Najlepše šetalište pored reke Nišave." },
+        { src: "/images/Sin-kom/zanimljivosti-u-gradu/pirotski-kej.jpeg", name: t.kejName || "Pirotski Kej", description: t.kejDesc || "Najlepše šetalište pored reke Nišave." },
       ]
     },
     {
@@ -66,7 +66,7 @@ export default function Surroundings() {
       image: "/images/Sin-kom/jerma/kanjon-jerme.jpg",
       gallery: [
         { src: "/images/Sin-kom/jerma/manastir-poganovo.jpg", name: t.poganovoName || "Manastir Poganovo", description: t.poganovoDesc || "" },
-        { src: "/images/Sin-kom/jerma/manastir-sukovo.JPG", name: t.sukovoName || "Manastir Sukovo", description: t.sukovoDesc || "" },
+        { src: "/images/Sin-kom/jerma/manastir-sukovo.jpg", name: t.sukovoName || "Manastir Sukovo", description: t.sukovoDesc || "" },
         { src: "/images/Sin-kom/jerma/banja-zvonce.jpg", name: t.zvonackaBanjaName || "Zvonačka banja", description: t.zvonackaBanjaDesc || "" },
       ]
     }
@@ -76,6 +76,7 @@ export default function Surroundings() {
 
   const handleBack = () => {
     setSelectedLocation(null);
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
@@ -110,7 +111,10 @@ export default function Surroundings() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full animate-fade-in-up">
               {locations.map((loc, index) => (
                 <button
-                  onClick={() => setSelectedLocation(index)}
+                  onClick={() => {
+                    setSelectedLocation(index);
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
                   key={index}
                   className="group relative block w-full aspect-[16/10] overflow-hidden border border-white/10 bg-white/5 backdrop-blur-md transition-all duration-500 hover:border-[#fcd949] rounded-none cursor-pointer"
                 >

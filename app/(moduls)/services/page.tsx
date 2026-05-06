@@ -93,6 +93,23 @@ export default function Serices() {
               prices={room.prices}
             />
           ))}
+
+          <div className="w-full mb-16 p-8 md:p-12 bg-white rounded-[2rem] shadow-xl border border-black/5 flex flex-col items-center gap-8 transition-all hover:shadow-2xl">
+            <h2 className="services-heading text-6xl md:text-7xl text-[#464545] text-center">
+              {t.restaurant}
+            </h2>
+            <div className="text-black/70 text-lg leading-relaxed max-w-4xl text-center mx-auto">
+              <p>{t.restaurantBreakfastInfo}</p>
+              <p className="mt-2 font-medium">- {t.restaurantBreakfastOption}</p>
+            </div>
+            <div className="relative w-full mt-4 overflow-hidden h-[200px] rounded-2xl">
+              <img 
+                src="/images/restoran-menu.jpg" 
+                alt="Hotel Sin-Kom Restoran" 
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
         </div>
       </main>
       <div className="bg-[#e0d9cd] w-full px-4 lg:px-[100px] pb-10">

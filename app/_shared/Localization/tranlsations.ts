@@ -95,6 +95,9 @@ export const translations = {
     perHour: "per hour",
     hotelGuests: "Hotel Guests",
     contactButton: "Contact Us",
+    restaurant: "Restaurant",
+    restaurantBreakfastInfo: "Guests staying at Hotel Sin-Kom can enjoy a highly-rated breakfast during their stay. Breakfast options include:",
+    restaurantBreakfastOption: "À la carte (ordering from the menu)",
     contactPageSubtitle: "Have a question or want to book a stay? Feel free to reach out to us.",
     messageLabel: "Message",
     messagePlaceholder: "How can we help you?",
@@ -166,6 +169,10 @@ export const translations = {
       "Zvonačka Banja is a well-known spa town near Pirot, famous for the therapeutic properties of its springs and the beautiful natural surroundings.",      
     selectPeriodPlaceholder: "Select your stay period",
       pricingList: "Pricing List",
+      bookingBenefits: "Benefits of direct booking",
+      bookingBenefit1: "- 10% discount for individual bookings",
+      bookingBenefit2: "- Early Check-In and/or Late Check-Out",
+      phoneBooking: "Phone Booking",
   
     },
   "latn-rs": {
@@ -262,6 +269,9 @@ export const translations = {
     perHour: "po satu",
     hotelGuests: "Gosti hotela",
     contactButton: "Kontaktirajte nas",
+    restaurant: "Restoran",
+    restaurantBreakfastInfo: "Gosti koji odsedaju u objektu Hotel Sin-Kom mogu da uživaju u visoko ocenjenom doručku tokom svog boravka. Opcije za doručak uključuju:",
+    restaurantBreakfastOption: "À la carte (naručivanje iz jelovnika)",
     contactPageSubtitle: "Imate pitanje ili želite da rezervišete smeštaj? Slobodno nas kontaktirajte.",
     messageLabel: "Poruka",
     messagePlaceholder: "Kako vam možemo pomoći?",
@@ -330,6 +340,10 @@ export const translations = {
     zvonackaBanjaDesc: "Zvončka Banja je poznato banjsko mesto u blizini Pirota, poznato po lekovitim svojstvima svojih izvora i prelepoj prirodi koja ga okružuje.",
     selectPeriodPlaceholder: "Izaberite period boravka",
     pricingList: "Cenovnik",
+    bookingBenefits: "Prednosti direktne rezervacije",
+    bookingBenefit1: "- Popust od 10% za individualne rezervacije",
+    bookingBenefit2: "- Rani Check-In i/ili kasniji Check-Out",
+    phoneBooking: "Rezervacija telefonom",
 
   },
   "bg-bg": {
@@ -426,6 +440,9 @@ export const translations = {
     perHour: "на час",
     hotelGuests: "Гости на хотела",
     contactButton: "Свържете се с нас",
+    restaurant: "Ресторант",
+    restaurantBreakfastInfo: "Гостите, отсядащи в Хотел Син-Ком, могат да се насладят на високо оценена закуска по време на престоя си. Вариантите за закуска включват:",
+    restaurantBreakfastOption: "À la carte (поръчка от меню)",
     contactPageSubtitle: "Имате въпрос или искате да резервирате престой? Чувствайте се свободни да се свържете с нас.",
     messageLabel: "Съобщение",
     messagePlaceholder: "Как можем да ви помогнем?",
@@ -494,6 +511,10 @@ export const translations = {
     zvonackaBanjaDesc: "Звонска баня е известен спа курорт в близост до Пирот, известен със своите лечебни свойства на минералните извори и красивата природа, която го заобикаля.",
     selectPeriodPlaceholder: "Изберете период на престой",  
     pricingList: "ценова листа",
+    bookingBenefits: "Преимущества прямого бронирования",
+    bookingBenefit1: "- 10% скидка за индивидуални бронирования",
+    bookingBenefit2: "- Ранен заезд и/или късен изход",
+    phoneBooking: "Брониране по телефон",
   },
 };
 

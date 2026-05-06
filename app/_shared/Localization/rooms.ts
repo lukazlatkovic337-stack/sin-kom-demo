@@ -9,7 +9,6 @@ export const ROOMS = [
     images: [
       "/images/Sin-kom/classic-soba/picture1.JPG",
       "/images/Sin-kom/classic-soba/picture2.JPG",
-      "/images/Sin-kom/classic-soba/picture3.JPG",
     ],
     nameKey: "clasicRoom",
     descriptionKey: "clasicRoomDescription",
