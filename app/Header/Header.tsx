@@ -20,7 +20,8 @@ const Header = () => {
         // Hides totally when scrolled past 100vh (the height of SwiperMain)
         setIsScrolled(window.scrollY > window.innerHeight - 50);
       } else {
-        setIsScrolled(false);
+        // Hides after scrolling a small amount (50px) on other pages
+        setIsScrolled(window.scrollY > 50);
       }
     };
 
@@ -37,72 +38,79 @@ const Header = () => {
           ? "-translate-y-full opacity-0 pointer-events-none"
           : "translate-y-0 opacity-100"
       }`
-    : "header-custom sticky top-0 left-0 w-full z-50 !bg-[#191A19]";
+    : `header-custom fixed top-0 left-0 w-full z-50 transition-all duration-500 !bg-[#191A19] ${
+        isScrolled
+          ? "-translate-y-full opacity-0 pointer-events-none"
+          : "translate-y-0 opacity-100"
+      }`;
 
   return (
-    <header className={headerClass}>
-      <div className="pl-[10px] pt-[10px]">
-        <Link href="/">
-          <img src={Logo.src} className="header-logo-img" />
-        </Link>
-      </div>
-
-      <div className="header-right">
-        <nav className="hidden md:flex gap-6 uppercase">
-          <Link
-            href="/"
-            className={`${linkClass} font-medium transition-colors`}
-          >
-            {t.home}
+    <>
+      <header className={headerClass}>
+        <div className="pl-[10px] pt-[10px]">
+          <Link href="/">
+            <img src={Logo.src} className="header-logo-img" />
           </Link>
-          <Link
-            href="/gallery"
-            className={`${linkClass} font-medium transition-colors`}
-          >
-            {t.gallery}
-          </Link>
-          <Link
-            href="/services"
-            className={`${linkClass} font-medium transition-colors`}
-          >
-            {t.services}
-          </Link>
-
-         
-
-          <Link
-            href="/reservation"
-            className={`${linkClass} font-medium transition-colors`}
-          >
-            {t.reservationTop}
-          </Link>
-          <Link
-            href="/surroundings"
-            className={`${linkClass} font-medium transition-colors`}
-          >
-            {t.surroundings}
-          </Link>
-
-           <Link
-            href="/contact"
-            className={`${linkClass} font-medium transition-colors`}
-          >
-            {t.contact}
-          </Link>
-        </nav>
-
-       <a
-          href="tel:+381638513631"
-          className="hidden xl:flex items-center justify-center bg-white/5 backdrop-blur-md border border-white/10 text-xs font-bold rounded-none px-4 py-2 text-white hover:bg-[#fcd949] hover:text-black hover:border-[#fcd949] transition-all duration-300 whitespace-nowrap cursor-pointer"
-        >
-          +381 63 851 3631
-        </a>
-
-        <div className="hidden md:block">
-          <LanguagePicker />
         </div>
-      </div>
-    </header>
+
+        <div className="header-right">
+          <nav className="hidden md:flex gap-6 uppercase">
+            <Link
+              href="/"
+              className={`${linkClass} font-medium transition-colors`}
+            >
+              {t.home}
+            </Link>
+            <Link
+              href="/gallery"
+              className={`${linkClass} font-medium transition-colors`}
+            >
+              {t.gallery}
+            </Link>
+            <Link
+              href="/services"
+              className={`${linkClass} font-medium transition-colors`}
+            >
+              {t.services}
+            </Link>
+
+           
+
+            <Link
+              href="/reservation"
+              className={`${linkClass} font-medium transition-colors`}
+            >
+              {t.reservationTop}
+            </Link>
+            <Link
+              href="/surroundings"
+              className={`${linkClass} font-medium transition-colors`}
+            >
+              {t.surroundings}
+            </Link>
+
+             <Link
+              href="/contact"
+              className={`${linkClass} font-medium transition-colors`}
+            >
+              {t.contact}
+            </Link>
+          </nav>
+
+         <a
+            href="tel:+381638513631"
+            className="hidden xl:flex items-center justify-center bg-white/5 backdrop-blur-md border border-white/10 text-xs font-bold rounded-none px-4 py-2 text-white hover:bg-[#fcd949] hover:text-black hover:border-[#fcd949] transition-all duration-300 whitespace-nowrap cursor-pointer"
+          >
+            +381 63 851 3631
+          </a>
+
+          <div className="hidden md:block">
+            <LanguagePicker />
+          </div>
+        </div>
+      </header>
+      {!isHome && <div className="h-[160px] w-full" />}
+    </>
   );
 };
 
