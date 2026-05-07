@@ -114,7 +114,7 @@ export default function Serices() {
         </div>
       </main>
       <div className="bg-[#e0d9cd] w-full px-4 lg:px-[100px] pb-10">
-        <div className="text-[24px] text-black font-bold pt-[20px] px-[20px] mb-6">
+        <div className="conferenceTextServices text-5xl md:text-6xl font-bold pt-[20px] px-[20px] mb-6">
           {t.conferenceRoom}
         </div>
 
