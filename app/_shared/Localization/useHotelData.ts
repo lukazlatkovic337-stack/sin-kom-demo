@@ -40,7 +40,7 @@ export const useHotelData = (): HotelData => {
           description: `${t.comfortRoomDescription}`,
           price: 5000,
           images: Array.from(
-            { length: 35 },
+            { length: 10 },
             (_, i) => `/images/Sin-kom/comfort-soba/slika${i + 1}.JPG`,
           ),
         },
@@ -50,7 +50,7 @@ export const useHotelData = (): HotelData => {
           description: `${t.doubleRoomDescription}`,
           price: 4000,
           images: Array.from(
-            { length: 32 },
+            { length: 8 },
             (_, i) => `/images/Sin-kom/dvokrevetna-soba/slika${i + 1}.JPG`,
           ),
         },

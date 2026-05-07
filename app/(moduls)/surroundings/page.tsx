@@ -36,6 +36,7 @@ export default function Surroundings() {
         { src: "/images/Sin-kom/stara-planina/stara-planina-skijanje.jpg", name: "Ski centar Stara Planina", description: "Ski centar na Staroj Planini je pravo mesto za sve ljubitelje skijanja i zimskog uživanja." },
         { src: "/images/Sin-kom/stara-planina/jelovicko-vrelo.jpg", name: "Jelovičko vrelo", description: "Jelovičko vrelo je prirodno vrelo koje se nalazi u blizini Stare planine." },
         { src: "/images/Sin-kom/stara-planina/rosomacki-lonci.jpg", name: "Rosomački lonci", description: "Rosomački lonci ili slavinjsko grlo predstavlja klisuru rečne doline Rosomačke reke. Nalazi se u blizini  sela Slavinja koje je od Pirota udaljeno 30 km.Do kanjona se dolazi  iz centra sela, za oko 15 minuta laganog hoda. Staza je obeležena i prolazi kroz jedinstveni reljef ovog dela Stare planine." },
+        { src: "/images/Sin-kom/stara-planina/manastir-temska.jpg", name: "Manastir Temska", description: "Manastir Temska nalazi se u parku prirode Stara Planina i jedan je od najstarijih manastira u Srbiji. Manastir Temska smešten je na prelepim padinama Stare Planine, okružen divljom prirodom i predstavlja idealno mesto za one koji žele da se odmore od svakodnevnog gradskog života." },
         
       ]
     },
@@ -44,11 +45,11 @@ export default function Surroundings() {
       description: t.vodopadiDescription || "Pirotski kraj je poznat kao zemlja vodopada. Od bajkovite Tupavice do moćnog Bigra, ovi prirodni dragulji pružaju osveženje i neverovatne prizore skrivene u dubini šuma.",
       image: "/images/Sin-kom/surroundings/vodopadi-home.jpg",
       gallery: [
-        { src: "/images/Sin-kom/vodopadi/vodopad-tupavica.jpg", name: "Vodopad Tupavica", description: "Vodopad Tupavica – najlepši vodopad Srbije." },
-        { src: "/images/Sin-kom/vodopadi/vodopad-piljski.jpg", name: "Piljski vodopad", description: "Visine 64 metаrа, treći je po visini vodopаd u Srbiji. Nаlаzi se nа oko 4km južno od selа Topli Do, nа Stаroj plаnini." },
-        { src: "/images/Sin-kom/vodopadi/vodopad-cunguljski-skok.jpg", name: "Čunguljski skok", description: "Nаlаzi se nа Toplodolskoj reci, u blizini selа Topli Do, nа Stаroj plаnini. Vodopad je visine 43 metara,smešten na nadmorskoj visini od 1400 metara." },
-        { src: "/images/Sin-kom/vodopadi/vodopad-kurtulski.jpg", name: "Kurtulski vodopad", description: "Visinа Kurtulskog skokа iznosi 27 metаrа. Obilazak vodopada isključivo u pratnji planinarskog vodiča." },
-        { src: "/images/Sin-kom/vodopadi/vodopad-kaludjerski-skok.jpg", name: "Kaluđerski skok", description: "Vodopad se nalazi na Kaluđerskoj reci, ispod Midžora, najvišeg vrha Stare planine." },
+        { src: "/images/Sin-kom/vodopadi/vodopad-tupavica.jpg", name: t.vodopadTupavica || "Vodopad Tupavica", description: t.vodopadTupavicaDesc || "Vodopad Tupavica – najlepši vodopad Srbije." },
+        { src: "/images/Sin-kom/vodopadi/vodopad-piljski.jpg", name: t.piljskiVodopad || "Piljski vodopad", description: t.piljskiVodopadDesc || "Visine 64 metаrа, treći je po visini vodopаd u Srbiji. Nаlаzi se nа oko 4km južno od selа Topli Do, nа Stаroj plаnini." },
+        { src: "/images/Sin-kom/vodopadi/vodopad-cunguljski-skok.jpg", name: t.cunguljskiSkok || "Čunguljski skok", description: t.cunguljskiSkokDesc || "Nаlаzi se nа Toplodolskoj reci, u blizini selа Topli Do, nа Stаroj plаnini. Vodopad je visine 43 metara,smešten na nadmorskoj visini od 1400 metara." },
+        { src: "/images/Sin-kom/vodopadi/vodopad-kurtulski.jpg", name: t.kurtulskiVodopad || "Kurtulski vodopad", description: t.kurtulskiVodopadDesc || "Visinа Kurtulskog skokа iznosi 27 metаrа. Obilazak vodopada isključivo u pratnji planinarskog vodiča." },
+        { src: "/images/Sin-kom/vodopadi/vodopad-kaludjerski-skok.jpg", name: t.kaludjerskiSkok || "Kaluđerski skok", description: t.kaludjerskiSkokDesc || "Vodopad se nalazi na Kaluđerskoj reci, ispod Midžora, najvišeg vrha Stare planine." },
         
       ]
     },
@@ -72,6 +73,7 @@ export default function Surroundings() {
         { src: "/images/Sin-kom/zanimljivosti-u-gradu/tvrdjava-pirot.jpg", name: t.kaleName || "Tvrđava Kale", description: t.kaleDesc || "Srednjovekovni grad, ponos pirotske istorije." },
         { src: "/images/Sin-kom/zanimljivosti-u-gradu/muzej-pirot.JPG", name: t.muzejName || "Muzej Ponišavlja", description: t.muzejDesc || "Autentična arhitektura i bogata riznica." },
         { src: "/images/Sin-kom/zanimljivosti-u-gradu/pirotski-kej.jpeg", name: t.kejName || "Pirotski Kej", description: t.kejDesc || "Najlepše šetalište pored reke Nišave." },
+        { src: "/images/Sin-kom/zanimljivosti-u-gradu/dag-banjica.jpg", name: t.banjicaName || "Dag Banjica", description: t.banjicaDesc || "Dag Banjica - Izvor termalne vode." },
       ]
     },
     {

@@ -20,38 +20,28 @@ export default function Home() {
   const { t } = useLanguage();
   const [isExpanded, setIsExpanded] = useState(false);
 
-  useEffect(() => {
-    document.title = "Garni Hotel Sin-Kom - Pirot";
-  }, []);
-
-  // Refs for scroll animations
-  const [heroRef, heroInView] = useInView<HTMLDivElement>({ threshold: 0.1 });
-  const [aboutRef, aboutInView] = useInView<HTMLDivElement>({ threshold: 0.1 });
-  const [iconsRef, iconsInView] = useInView<HTMLDivElement>({ threshold: 0.1 });
-  const [accomodationRef, accomodationInView] = useInView<HTMLDivElement>({ threshold: 0.1 });
-  const [mainLinksRef, mainLinksInView] = useInView<HTMLDivElement>({ threshold: 0.1 });
-  const [vicinityRef, vicinityInView] = useInView<HTMLDivElement>({ threshold: 0.1 });
-  const [markRef, markInView] = useInView<HTMLDivElement>({ threshold: 0.1 });
+  // Set document title on initial load
+  useEffect(() => { document.title = "Garni Hotel Sin-Kom - Pirot"; }, []);
 
   return (
     <div className="flex flex-col flex-1 items-center justify-center font-sans">
       <main className="flex flex-1 w-full gap-[20px]  flex-col items-center justify-between ">
         <div className="relative w-full">
           <SwiperMain />
-          <div ref={heroRef} className="absolute inset-0 z-10 flex flex-col items-center justify-center pointer-events-none px-4">
-            <h1 className={`swiperLine1 text-white text-6xl md:text-9xl font-bold text-center drop-shadow-2xl ${heroInView ? 'animate-fade-in-up' : 'reveal-hidden'}`}>
+          <div className="absolute inset-0 z-10 flex flex-col items-center justify-center pointer-events-none px-4">
+            <h1 className={`swiperLine1 text-white text-6xl md:text-9xl font-bold text-center drop-shadow-2xl reveal-hidden animate-fade-in-up`}>
               {t.swiperLine1}
             </h1>
             
-            <h1 className={`swiperLine4 text-white text-4xl md:text-7xl font-bold text-center drop-shadow-2xl uppercase ${heroInView ? 'animate-fade-in-up' : 'reveal-hidden'}`}>
+            <h1 className={`swiperLine4 text-white text-4xl md:text-7xl font-bold text-center drop-shadow-2xl uppercase reveal-hidden animate-fade-in-up delay-200`}>
               {t.swiperLine4}
             </h1>
-            <p className={`swiperLine5 text-[#f7cd25] text-3xl md:text-5xl text-center drop-shadow-2xl mt-6  ${heroInView ? 'animate-fade-in-up delay-200' : 'reveal-hidden'}`}>
+            <p className={`swiperLine5 text-[#f7cd25] text-3xl md:text-5xl text-center drop-shadow-2xl mt-6 reveal-hidden animate-fade-in-up delay-400`}>
               {t.swiperLine5}
             </p>
           </div>
         </div>
-        <div ref={aboutRef} className={`about-hotel-text-home ${aboutInView ? 'animate-fade-in-up' : 'reveal-hidden'}`}>
+        <div className={`about-hotel-text-home reveal-hidden animate-fade-in-up delay-600`}>
           <ApartmentIcon style={{ fontSize: 70 }} />
           <h1 className="mainPageText font-semibold text-[32px] md:text-[52px] leading-tight text-center mb-6">
             {t.mainPageText}
@@ -83,23 +73,29 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div ref={iconsRef} className={`icons-container ${iconsInView ? 'animate-fade-in-up delay-200' : 'reveal-hidden'}`}>
-            <div className="icons-with-description">
-              <GroupsIcon style={{ fontSize: 80 }} />
-              <span>{t.conference}</span>
+          <div className={`icons-container flex flex-col items-start gap-2 mt-16 w-full max-w-4xl reveal-hidden animate-fade-in-up delay-800`}>
+            <div className="icons-with-description flex flex-row items-center gap-10">
+              <div className="icon-circle">
+                <GroupsIcon style={{ fontSize: 35 }} />
+              </div>
+              <p className="text-left font-medium text-lg md:text-xl text-zinc-800 leading-relaxed tracking-tight">{t.conferenceMainText}</p>
             </div>
-            <div className="icons-with-description">
-              <LocalParkingIcon style={{ fontSize: 80 }} />
-              <span>{t.parking}</span>
+            <div className="icons-with-description flex flex-row items-center gap-10">
+              <div className="icon-circle">
+                <LocalParkingIcon style={{ fontSize: 35 }} />
+              </div>
+              <p className="text-left font-medium text-lg md:text-xl text-zinc-800 leading-relaxed tracking-tight">{t.parkingMainText}</p>
             </div>
-            <div className="icons-with-description">
-              <WifiIcon style={{ fontSize: 80 }} />
-              <span>{t.wirelessInternet2}</span>
+            <div className="icons-with-description flex flex-row items-center gap-10">
+              <div className="icon-circle">
+                <WifiIcon style={{ fontSize: 35 }} />
+              </div>
+              <p className="text-left font-medium text-lg md:text-xl text-zinc-800 leading-relaxed tracking-tight">{t.wirelessInternet2}</p>
             </div>
           </div>
         </div>
 
-        <div ref={accomodationRef} className={`w-full bg-zinc-950 py-32 flex flex-col items-center border-y border-zinc-800/50 ${accomodationInView ? 'animate-fade-in-up' : 'reveal-hidden'}`}>
+        <div className={`w-full bg-zinc-950 py-32 flex flex-col items-center border-y border-zinc-800/50 reveal-hidden animate-fade-in-up delay-1000`}>
           <div className="w-full max-w-6xl px-6 flex flex-col md:flex-row justify-between items-center md:items-end mb-16 gap-8">
             <div className="home-page-large-text !text-white !mb-0 !text-5xl md:!text-6xl tracking-tight" id="home-page-large-text-font">
               {t.accomodation}
@@ -116,8 +112,7 @@ export default function Home() {
           </div>
         </div>
 
-       
-        <div ref={vicinityRef} className={`vicinity-section ${vicinityInView ? 'animate-fade-in-up' : 'reveal-hidden'}`}>
+        <div className={`vicinity-section reveal-hidden animate-fade-in-up delay-1200`}>
           <div className="vicinity-background"></div>
           <h2 className="vicinity-title">{t.okolinaTitle}</h2>
           <h2 className="vicinity-description">{t.okolinaDescription}</h2>
@@ -149,7 +144,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div ref={markRef} className={`mark-container ${markInView ? 'animate-fade-in-up' : 'reveal-hidden'}`}>
+        <div className={`mark-container reveal-hidden animate-fade-in-up delay-1400`}>
           <div className="booking-reviews-container">
           <div className="booking-reviews-content">
 <div className="text-[#fcd949] font-bold text-2xl uppercase tracking-widest mb-4">{t.markText}</div>
