@@ -57,7 +57,7 @@ export const useHotelData = (): HotelData => {
       ],
       reception: {
         images: Array.from(
-          { length: 6 },
+          { length: 7 },
           (_, i) => `/images/Sin-kom/recepcija/slika${i + 1}.JPG`,
         ),
       },
