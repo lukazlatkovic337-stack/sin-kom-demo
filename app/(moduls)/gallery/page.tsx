@@ -88,7 +88,7 @@ const CustomCarousel = ({
       <button
         onClick={prevSlide}
         aria-label="Previous image"
-        className={`absolute left-6 top-1/2 -translate-y-1/2 bg-white/10 backdrop-blur-md hover:bg-[#fcd949] hover:text-black text-white w-12 h-12 flex items-center justify-center rounded-full transition-all duration-300 z-20 border border-white/10 ${isModalView ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'}`}
+        className={`absolute left-6 top-1/2 -translate-y-1/2 bg-white/10 backdrop-blur-md hover:bg-[#EBD27D] hover:text-black text-white w-12 h-12 flex items-center justify-center rounded-full transition-all duration-300 z-20 border border-white/10 ${isModalView ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'}`}
       >
         &#10094;
       </button>
@@ -97,7 +97,7 @@ const CustomCarousel = ({
       <button
         onClick={nextSlide}
         aria-label="Next image"
-        className={`absolute right-6 top-1/2 -translate-y-1/2 bg-white/10 backdrop-blur-md hover:bg-[#fcd949] hover:text-black text-white w-12 h-12 flex items-center justify-center rounded-full transition-all duration-300 z-20 border border-white/10 ${isModalView ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'}`}
+        className={`absolute right-6 top-1/2 -translate-y-1/2 bg-white/10 backdrop-blur-md hover:bg-[#EBD27D] hover:text-black text-white w-12 h-12 flex items-center justify-center rounded-full transition-all duration-300 z-20 border border-white/10 ${isModalView ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'}`}
       >
         &#10095;
       </button>
@@ -111,7 +111,7 @@ const CustomCarousel = ({
             aria-label={`Go to image ${index + 1}`}
             className={`flex-1 h-[4px] rounded-full transition-all duration-500 cursor-pointer ${
               currentIndex === index
-                ? "bg-[#fcd949] scale-y-125"
+                ? "bg-[#EBD27D] scale-y-125"
                 : "bg-white/30 hover:bg-white/60"
             }`}
           />
@@ -170,7 +170,7 @@ export default function Galery() {
         <div className="fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-black/95 backdrop-blur-xl animate-in fade-in duration-300 p-4">
           <button 
             onClick={() => setModalState((prev) => ({ ...prev, isOpen: false }))}
-            className="absolute top-6 right-6 text-white/70 hover:text-[#fcd949] transition-colors z-[10000] p-2"
+            className="absolute top-6 right-6 text-white/70 hover:text-[#EBD27D] transition-colors z-[10000] p-2"
           >
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-10 h-10">
               <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
@@ -178,7 +178,7 @@ export default function Galery() {
           </button>
           
           <div className="w-full max-w-7xl flex flex-col gap-6">
-            <h2 className="text-xl md:text-2xl font-bold text-[#fcd949] uppercase tracking-widest text-center">
+            <h2 className="text-xl md:text-2xl font-bold text-[#EBD27D] uppercase tracking-widest text-center">
               {modalState.title}
             </h2>
             <CustomCarousel 
@@ -196,12 +196,12 @@ export default function Galery() {
           <h1 className="galleryTitle text-6xl md:text-8xl font-light text-white text-center tracking-tighter">
             {t.gallery}
           </h1>
-          <div className="w-24 h-1 bg-[#fcd949]"></div>
+          <div className="w-24 h-1 bg-[#EBD27D]"></div>
         </div>
 
         {/* Reception Card */}
-        <section className="w-full flex flex-col gap-6 bg-white/5 backdrop-blur-xl p-4 sm:p-8 rounded-[2rem] border border-white/10 hover:border-[#fcd949]/50 transition-all duration-500 shadow-2xl">
-          <h2 className="text-2xl md:text-3xl font-bold text-[#fcd949] uppercase tracking-widest px-2">
+        <section className="w-full flex flex-col gap-6 bg-white/5 backdrop-blur-xl p-4 sm:p-8 rounded-[2rem] border border-white/10 hover:border-[#EBD27D]/50 transition-all duration-500 shadow-2xl">
+          <h2 className="text-2xl md:text-3xl font-bold text-[#EBD27D] uppercase tracking-widest px-2">
             {t.reception}
           </h2>
           <CustomCarousel 
@@ -212,8 +212,8 @@ export default function Galery() {
         </section>
 
         {/* Conference Card */}
-        <section className="w-full flex flex-col gap-6 bg-white/5 backdrop-blur-xl p-4 sm:p-8 rounded-[2rem] border border-white/10 hover:border-[#fcd949]/50 transition-all duration-500 shadow-2xl">
-          <h2 className="text-2xl md:text-3xl font-bold text-[#fcd949] uppercase tracking-widest px-2">
+        <section className="w-full flex flex-col gap-6 bg-white/5 backdrop-blur-xl p-4 sm:p-8 rounded-[2rem] border border-white/10 hover:border-[#EBD27D]/50 transition-all duration-500 shadow-2xl">
+          <h2 className="text-2xl md:text-3xl font-bold text-[#EBD27D] uppercase tracking-widest px-2">
             {t.conferenceRoom}
           </h2>
           <CustomCarousel
@@ -227,9 +227,9 @@ export default function Galery() {
         {rooms.map((room) => (
           <section
             key={room.id}
-            className="w-full flex flex-col gap-6 bg-white/5 backdrop-blur-xl p-4 sm:p-8 rounded-[2rem] border border-white/10 hover:border-[#fcd949]/50 transition-all duration-500 shadow-2xl"
+            className="w-full flex flex-col gap-6 bg-white/5 backdrop-blur-xl p-4 sm:p-8 rounded-[2rem] border border-white/10 hover:border-[#EBD27D]/50 transition-all duration-500 shadow-2xl"
           >
-            <h2 className="text-2xl md:text-3xl font-bold text-[#fcd949] uppercase tracking-widest px-2">
+            <h2 className="text-2xl md:text-3xl font-bold text-[#EBD27D] uppercase tracking-widest px-2">
               {room.name}
             </h2>
             <p className="text-white/60 px-2 text-lg italic leading-relaxed">

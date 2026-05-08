@@ -169,26 +169,26 @@ export default function Reservation() {
             <a 
               href="/docs/104-CENOVNIK-13012025.pdf" 
               target="_blank" 
-              className="mb-2 px-6 py-2 border border-[#fcd949] text-[#fcd949] hover:bg-[#fcd949] hover:text-black transition-all duration-300 rounded-full text-xs font-bold uppercase tracking-[0.2em]"
+              className="mb-2 px-6 py-2 border border-[#EBD27D] text-[#EBD27D] hover:bg-[#EBD27D] hover:text-black transition-all duration-300 rounded-full text-xs font-bold uppercase tracking-[0.2em]"
             >
               {t.pricingList}
             </a>
           </div>
-          <div className="w-24 h-1 bg-[#fcd949]"></div>
+          <div className="w-24 h-1 bg-[#EBD27D]"></div>
         </div>
 
         {/* Benefits and Phone Booking Section */}
         <div className="flex flex-col items-center text-center w-full mb-12 gap-2">
-          <h2 className="text-2xl md:text-3xl font-bold text-[#fcd949] uppercase tracking-widest mb-2">
+          <h2 className="text-2xl md:text-3xl font-bold text-[#EBD27D] uppercase tracking-widest mb-2">
             {t.bookingBenefits}
           </h2>
           <p className="text-white/80 text-base md:text-lg">{t.bookingBenefit1}</p>
           <p className="text-white/80 text-base md:text-lg">{t.bookingBenefit2}</p>
           
-          <h2 className="text-2xl md:text-3xl font-bold text-[#fcd949] uppercase tracking-widest mt-8 mb-2">
+          <h2 className="text-2xl md:text-3xl font-bold text-[#EBD27D] uppercase tracking-widest mt-8 mb-2">
             {t.phoneBooking}
           </h2>
-          <a href="tel:+381638513631" className="text-white text-2xl md:text-3xl font-bold hover:text-[#fcd949] transition-colors duration-300">
+          <a href="tel:+381638513631" className="text-white text-2xl md:text-3xl font-bold hover:text-[#EBD27D] transition-colors duration-300">
             +381 63 851 3631
           </a>
         </div>
@@ -199,7 +199,7 @@ export default function Reservation() {
             {rooms.map((room, index) => (
               <div 
                 key={room.id}
-                className="p-6 bg-zinc-900/60 backdrop-blur-xl rounded-[2rem] border border-white/10 hover:border-[#fcd949]/50 transition-all duration-500 shadow-2xl flex flex-col gap-6 relative"
+                className="p-6 bg-zinc-900/60 backdrop-blur-xl rounded-[2rem] border border-white/10 hover:border-[#EBD27D]/50 transition-all duration-500 shadow-2xl flex flex-col gap-6 relative"
               >
                 {index > 0 && (
                   <button
@@ -221,7 +221,7 @@ export default function Reservation() {
                       type="text"
                       disabled
                       value={t.bedAndBreakfast}
-                      className="p-3 border rounded-lg bg-zinc-800 border-white/20 text-white/70 placeholder-white/50 focus:border-[#fcd949] focus:ring-1 focus:ring-[#fcd949] transition-colors duration-200 cursor-not-allowed appearance-none"
+                      className="p-3 border rounded-lg bg-zinc-800 border-white/20 text-white/70 placeholder-white/50 focus:border-[#EBD27D] focus:ring-1 focus:ring-[#EBD27D] transition-colors duration-200 cursor-not-allowed appearance-none"
                     />
                   </div>
 
@@ -235,7 +235,7 @@ export default function Reservation() {
                         onChange={(e) =>
                           handleRoomChange(room.id, "roomId", e.target.value)
                         }
-                        className="w-full p-3 pr-10 border rounded-lg bg-zinc-800 border-white/20 text-white focus:border-[#fcd949] focus:ring-1 focus:ring-[#fcd949] transition-colors duration-200 outline-none appearance-none cursor-pointer"
+                        className="w-full p-3 pr-10 border rounded-lg bg-zinc-800 border-white/20 text-white focus:border-[#EBD27D] focus:ring-1 focus:ring-[#EBD27D] transition-colors duration-200 outline-none appearance-none cursor-pointer"
                       >
                         {hotelRooms.map((r) => (
                           <option key={r.id} value={r.id} className="bg-zinc-900 text-white">
@@ -257,7 +257,7 @@ export default function Reservation() {
                         onChange={(e) =>
                           handleRoomChange(room.id, "persons", e.target.value)
                         }
-                        className="w-full p-3 pr-10 border rounded-lg bg-zinc-800 border-white/20 text-white focus:border-[#fcd949] focus:ring-1 focus:ring-[#fcd949] transition-colors duration-200 outline-none appearance-none cursor-pointer"
+                        className="w-full p-3 pr-10 border rounded-lg bg-zinc-800 border-white/20 text-white focus:border-[#EBD27D] focus:ring-1 focus:ring-[#EBD27D] transition-colors duration-200 outline-none appearance-none cursor-pointer"
                       >
                         <option value="1" className="bg-zinc-900 text-white">
                           {t.onePerson}
@@ -275,7 +275,7 @@ export default function Reservation() {
                       {t.selectPeriod}
                     </label>
                     <div className="relative">
-                      <CalendarMonthIcon className="absolute left-3 top-1/2 -translate-y-1/2 text-[#fcd949] text-xl z-10 pointer-events-none" />
+                      <CalendarMonthIcon className="absolute left-3 top-1/2 -translate-y-1/2 text-[#EBD27D] text-xl z-10 pointer-events-none" />
                       <DatePicker
                         locale={language} // Postavlja jezik kalendara (npr. 'latn-rs')
                         dateFormat="dd-MMMM-yyyy" // Format: 13-januar-2025
@@ -287,7 +287,7 @@ export default function Reservation() {
                         }
                         isClearable={true}
                         placeholderText={t.selectPeriodPlaceholder || "Od - Do"}
-                        className="w-full p-3 pl-11 border rounded-lg bg-zinc-800 border-white/20 text-white placeholder-white/50 focus:border-[#fcd949] focus:ring-1 focus:ring-[#fcd949] transition-colors duration-200 outline-none"
+                        className="w-full p-3 pl-11 border rounded-lg bg-zinc-800 border-white/20 text-white placeholder-white/50 focus:border-[#EBD27D] focus:ring-1 focus:ring-[#EBD27D] transition-colors duration-200 outline-none"
                         wrapperClassName="w-full"
                       />
                     </div>
@@ -309,7 +309,7 @@ export default function Reservation() {
                               e.target.checked,
                             )
                           }
-                          className="w-5 h-5 cursor-pointer accent-[#fcd949]"
+                          className="w-5 h-5 cursor-pointer accent-[#EBD27D]"
                         />
                         {t.extraBed}
                       </label>
@@ -324,7 +324,7 @@ export default function Reservation() {
                               e.target.checked,
                             )
                           }
-                          className="w-5 h-5 cursor-pointer accent-[#fcd949]"
+                          className="w-5 h-5 cursor-pointer accent-[#EBD27D]"
                         />
                         {t.nonSmokingRoom}
                       </label>
@@ -335,7 +335,7 @@ export default function Reservation() {
                     <span className="text-white/60 text-sm uppercase tracking-wider">
                       {t.roomPrice}:
                     </span>
-                    <div className="text-2xl font-bold text-[#fcd949]">
+                    <div className="text-2xl font-bold text-[#EBD27D]">
                       {calculateRoomPrice(room)} RSD
                     </div>
                   </div>
@@ -346,7 +346,7 @@ export default function Reservation() {
             <button
               type="button"
               onClick={handleAddRoom}
-              className="flex items-center gap-2 text-[#fcd949] font-bold uppercase tracking-widest hover:text-white transition-colors duration-300 w-fit"
+              className="flex items-center gap-2 text-[#EBD27D] font-bold uppercase tracking-widest hover:text-white transition-colors duration-300 w-fit"
             >
               <AddCircleOutlineIcon />
               {t.addAnotherRoom}
@@ -354,8 +354,8 @@ export default function Reservation() {
           </div>
 
           {/* Personal Information */}
-          <div className="p-6 bg-zinc-900/60 backdrop-blur-xl rounded-[2rem] border border-white/10 hover:border-[#fcd949]/50 transition-all duration-500 shadow-2xl">
-            <h2 className="text-2xl md:text-3xl font-bold text-[#fcd949] uppercase tracking-widest mb-6">{t.personalData}</h2>
+          <div className="p-6 bg-zinc-900/60 backdrop-blur-xl rounded-[2rem] border border-white/10 hover:border-[#EBD27D]/50 transition-all duration-500 shadow-2xl">
+            <h2 className="text-2xl md:text-3xl font-bold text-[#EBD27D] uppercase tracking-widest mb-6">{t.personalData}</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <input
                 required
@@ -364,7 +364,7 @@ export default function Reservation() {
                 placeholder={t.fullName}
                 value={userInfo.fullName}
                 onChange={handleUserInfoChange}
-                className="p-3 border rounded-lg bg-zinc-800 border-white/20 text-white placeholder-white/50 focus:border-[#fcd949] focus:ring-1 focus:ring-[#fcd949] transition-colors duration-200 outline-none w-full"
+                className="p-3 border rounded-lg bg-zinc-800 border-white/20 text-white placeholder-white/50 focus:border-[#EBD27D] focus:ring-1 focus:ring-[#EBD27D] transition-colors duration-200 outline-none w-full"
               />
               <input
                 required
@@ -373,7 +373,7 @@ export default function Reservation() {
                 placeholder={t.mobilePhone}
                 value={userInfo.phone}
                 onChange={handleUserInfoChange}
-                className="p-3 border rounded-lg bg-zinc-800 border-white/20 text-white placeholder-white/50 focus:border-[#fcd949] focus:ring-1 focus:ring-[#fcd949] transition-colors duration-200 outline-none w-full"
+                className="p-3 border rounded-lg bg-zinc-800 border-white/20 text-white placeholder-white/50 focus:border-[#EBD27D] focus:ring-1 focus:ring-[#EBD27D] transition-colors duration-200 outline-none w-full"
               />
               <input
                 required
@@ -382,7 +382,7 @@ export default function Reservation() {
                 placeholder={t.emailAddress}
                 value={userInfo.email}
                 onChange={handleUserInfoChange}
-                className="p-3 border rounded-lg bg-zinc-800 border-white/20 text-white placeholder-white/50 focus:border-[#fcd949] focus:ring-1 focus:ring-[#fcd949] transition-colors duration-200 outline-none w-full"
+                className="p-3 border rounded-lg bg-zinc-800 border-white/20 text-white placeholder-white/50 focus:border-[#EBD27D] focus:ring-1 focus:ring-[#EBD27D] transition-colors duration-200 outline-none w-full"
               />
               <input
                 required
@@ -391,7 +391,7 @@ export default function Reservation() {
                 placeholder={t.address}
                 value={userInfo.address}
                 onChange={handleUserInfoChange}
-                className="p-3 border rounded-lg bg-zinc-800 border-white/20 text-white placeholder-white/50 focus:border-[#fcd949] focus:ring-1 focus:ring-[#fcd949] transition-colors duration-200 outline-none w-full"
+                className="p-3 border rounded-lg bg-zinc-800 border-white/20 text-white placeholder-white/50 focus:border-[#EBD27D] focus:ring-1 focus:ring-[#EBD27D] transition-colors duration-200 outline-none w-full"
               />
               <input
                 required
@@ -400,7 +400,7 @@ export default function Reservation() {
                 placeholder={t.city}
                 value={userInfo.city}
                 onChange={handleUserInfoChange}
-                className="p-3 border rounded-lg bg-zinc-800 border-white/20 text-white placeholder-white/50 focus:border-[#fcd949] focus:ring-1 focus:ring-[#fcd949] transition-colors duration-200 outline-none w-full"
+                className="p-3 border rounded-lg bg-zinc-800 border-white/20 text-white placeholder-white/50 focus:border-[#EBD27D] focus:ring-1 focus:ring-[#EBD27D] transition-colors duration-200 outline-none w-full"
               />
               <input
                 required
@@ -409,7 +409,7 @@ export default function Reservation() {
                 placeholder={t.country}
                 value={userInfo.country}
                 onChange={handleUserInfoChange}
-                className="p-3 border rounded-lg bg-zinc-800 border-white/20 text-white placeholder-white/50 focus:border-[#fcd949] focus:ring-1 focus:ring-[#fcd949] transition-colors duration-200 outline-none w-full"
+                className="p-3 border rounded-lg bg-zinc-800 border-white/20 text-white placeholder-white/50 focus:border-[#EBD27D] focus:ring-1 focus:ring-[#EBD27D] transition-colors duration-200 outline-none w-full"
               />
             </div>
           </div>
@@ -421,7 +421,7 @@ export default function Reservation() {
           <button
             type="submit"
             disabled={isSubmitting}
-            className="bg-[#fcd949] text-black font-bold uppercase tracking-widest px-12 py-4 rounded-full shadow-lg hover:bg-white transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed self-center md:self-end mt-4"
+            className="bg-[#EBD27D] text-black font-bold uppercase tracking-widest px-12 py-4 rounded-full shadow-lg hover:bg-white transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed self-center md:self-end mt-4"
           >
             {isSubmitting ? "Sending..." : t.sendRequest}
           </button>

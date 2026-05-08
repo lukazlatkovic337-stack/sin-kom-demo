@@ -30,7 +30,7 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [isHome]);
 
-  const linkClass = "text-white hover:text-[#fcd949] relative py-1 after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-[#fcd949] after:transition-all after:duration-300 hover:after:w-full";
+  const linkClass = "text-white hover:text-[#EBD27D] relative py-1 after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-[#EBD27D] after:transition-all after:duration-300 hover:after:w-full";
 
   const headerClass = isHome
     ? `header-custom fixed top-0 left-0 w-full z-50 transition-all duration-500 !bg-transparent ${
@@ -99,7 +99,7 @@ const Header = () => {
 
          <a
             href="tel:+381638513631"
-            className="hidden xl:flex items-center justify-center bg-white/5 backdrop-blur-md border border-white/10 text-xs font-bold rounded-none px-4 py-2 text-white hover:bg-[#fcd949] hover:text-black hover:border-[#fcd949] transition-all duration-300 whitespace-nowrap cursor-pointer"
+            className="hidden xl:flex items-center justify-center bg-white/5 backdrop-blur-md border border-white/10 text-xs font-bold rounded-none px-4 py-2 text-white hover:bg-[#EBD27D] hover:text-black hover:border-[#EBD27D] transition-all duration-300 whitespace-nowrap cursor-pointer"
           >
             +381 63 851 3631
           </a>

@@ -27,6 +27,17 @@ export default function Surroundings() {
 
   const locations = [
     {
+      title: t.zanimljivostiTitle || "Zanimljivosti u gradu",
+      description: t.zanimljivostiDescription || "Pirot nudi bogat kulturni sadržaj. Posetite srednjovekovnu tvrđavu Momčilov grad, istražite Muzej Ponišavlja sa autentičnom arhitekturom ili prošetajte najlepšim kejom u Srbiji pored reke Nišave.",
+      image: "/images/Sin-kom/zanimljivosti-u-gradu/kej-naslovna.jpg",
+      gallery: [
+        { src: "/images/Sin-kom/zanimljivosti-u-gradu/tvrdjava-pirot.jpg", name: t.kaleName || "Tvrđava Kale", description: t.kaleDesc || "Srednjovekovni grad, ponos pirotske istorije." },
+        { src: "/images/Sin-kom/zanimljivosti-u-gradu/muzej-pirot.JPG", name: t.muzejName || "Muzej Ponišavlja", description: t.muzejDesc || "Autentična arhitektura i bogata riznica." },
+        { src: "/images/Sin-kom/zanimljivosti-u-gradu/pirotski-kej.jpeg", name: t.kejName || "Pirotski Kej", description: t.kejDesc || "Najlepše šetalište pored reke Nišave." },
+        { src: "/images/Sin-kom/zanimljivosti-u-gradu/dag-banjica.jpg", name: t.banjicaName || "Dag Banjica", description: t.banjicaDesc || "Dag Banjica - Izvor termalne vode." },
+      ]
+    },
+    {
       title: t.staraPlaninaTitle || "Stara Planina",
       description: t.staraPlaninaDescription || "Stara planina je riznica biodiverziteta i dom najviših vrhova u Srbiji. Istražite Midžor, Babin zub i beskrajne pašnjake koji oduzimaju dah u svako godišnje doba.",
       image: "/images/Sin-kom/surroundings/stara-planina-home.jpg",
@@ -65,17 +76,7 @@ export default function Surroundings() {
         
       ]
     },
-    {
-      title: t.zanimljivostiTitle || "Zanimljivosti u gradu",
-      description: t.zanimljivostiDescription || "Pirot nudi bogat kulturni sadržaj. Posetite srednjovekovnu tvrđavu Momčilov grad, istražite Muzej Ponišavlja sa autentičnom arhitekturom ili prošetajte najlepšim kejom u Srbiji pored reke Nišave.",
-      image: "/images/Sin-kom/zanimljivosti-u-gradu/kej-naslovna.jpg",
-      gallery: [
-        { src: "/images/Sin-kom/zanimljivosti-u-gradu/tvrdjava-pirot.jpg", name: t.kaleName || "Tvrđava Kale", description: t.kaleDesc || "Srednjovekovni grad, ponos pirotske istorije." },
-        { src: "/images/Sin-kom/zanimljivosti-u-gradu/muzej-pirot.JPG", name: t.muzejName || "Muzej Ponišavlja", description: t.muzejDesc || "Autentična arhitektura i bogata riznica." },
-        { src: "/images/Sin-kom/zanimljivosti-u-gradu/pirotski-kej.jpeg", name: t.kejName || "Pirotski Kej", description: t.kejDesc || "Najlepše šetalište pored reke Nišave." },
-        { src: "/images/Sin-kom/zanimljivosti-u-gradu/dag-banjica.jpg", name: t.banjicaName || "Dag Banjica", description: t.banjicaDesc || "Dag Banjica - Izvor termalne vode." },
-      ]
-    },
+    
     {
       title: t.jermaTitle || "Kanjon reke Jerme",
       description: t.jermaDescription || "Kanjon reke Jerme je skriveni dragulj prirode, poznat po svojim strmim liticama, kristalno čistoj vodi i netaknutoj divljini. Idealno mesto za avanturiste i ljubitelje prirode koji traže mir i spektakularne pejzaže.",
@@ -101,11 +102,11 @@ export default function Surroundings() {
       {selectedLocation !== null && (
         <button
           onClick={handleBack}
-          className={`fixed left-4 md:left-16 z-50 flex items-center gap-3 text-white/70 hover:text-[#fcd949] transition-all duration-500 group ${
+          className={`fixed left-4 md:left-16 z-50 flex items-center gap-3 text-white/70 hover:text-[#EBD27D] transition-all duration-500 group ${
             isScrolled ? "top-10" : "top-48"
           }`}
         >
-          <div className="w-10 h-10 flex items-center justify-center bg-white/5 border border-white/10 group-hover:border-[#fcd949] transition-all">
+          <div className="w-10 h-10 flex items-center justify-center bg-white/5 border border-white/10 group-hover:border-[#EBD27D] transition-all">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5">
               <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
             </svg>
@@ -134,7 +135,7 @@ export default function Surroundings() {
                     window.scrollTo({ top: 0, behavior: "smooth" });
                   }}
                   key={index}
-                  className="group relative block w-full aspect-[16/10] overflow-hidden border border-white/10 bg-white/5 backdrop-blur-md transition-all duration-500 hover:border-[#fcd949] rounded-none cursor-pointer"
+                  className="group relative block w-full aspect-[16/10] overflow-hidden border border-white/10 bg-white/5 backdrop-blur-md transition-all duration-500 hover:border-[#EBD27D] rounded-none cursor-pointer"
                 >
                   <img
                     src={loc.image}
@@ -142,7 +143,7 @@ export default function Surroundings() {
                     className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-60 group-hover:opacity-80"
                   />
                   <div className="absolute inset-0 p-8 flex flex-col justify-end bg-gradient-to-t from-black/90 via-black/20 to-transparent">
-                    <h3 className="text-3xl font-bold text-white mb-2 group-hover:text-[#fcd949] transition-colors uppercase tracking-widest text-left">
+                    <h3 className="text-3xl font-bold text-white mb-2 group-hover:text-[#EBD27D] transition-colors uppercase tracking-widest text-left">
                       {loc.title}
                     </h3>
                     <p className="text-white/80 text-sm md:text-base max-w-md line-clamp-2 italic text-left">
@@ -161,7 +162,7 @@ export default function Surroundings() {
             
             <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
               {currentLoc.gallery.map((item, i) => (
-                <div key={i} className="flex flex-col gap-4 group bg-white/5 backdrop-blur-xl border border-white/10 p-4 shadow-xl transition-all hover:border-[#fcd949]">
+                <div key={i} className="flex flex-col gap-4 group bg-white/5 backdrop-blur-xl border border-white/10 p-4 shadow-xl transition-all hover:border-[#EBD27D]">
                   <div className="aspect-[3/4] overflow-hidden border border-white/10 bg-black/40">
                     <img 
                       src={item.src} 
@@ -170,7 +171,7 @@ export default function Surroundings() {
                     />
                   </div>
                   <div className="flex flex-col gap-2">
-                    <h4 className="text-[#fcd949] text-lg font-bold uppercase tracking-widest">
+                    <h4 className="text-[#EBD27D] text-lg font-bold uppercase tracking-widest">
                       {item.name}
                     </h4>
                     <p className="text-white/80 text-sm italic leading-relaxed">

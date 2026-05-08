@@ -14,17 +14,16 @@ export const ROOMS = [
     descriptionKey: "clasicRoomDescription",
     features: ["twoBeds", "tv", "digiSat", "phoneLine", "wifi", "hairdryer", "ac", "sosAlarm"],
     prices: [
-      { labelKey: "priceOnePerson", amount: "3.800 din" },
-      { labelKey: "priceTwoPersons", amount: "5.000 din" }
+      { labelKey: "priceOnePerson", amount: "OD 3.800 RSD" },
     ]
   },
   {
     id: "standard-room",
     images: [
-      "/images/Sin-kom/services-tab/comfort-soba/slika8.JPG",
-      "/images/Sin-kom/services-tab/comfort-soba/slika9.JPG",
-      "/images/Sin-kom/services-tab/comfort-soba/slika15.JPG",
-      "/images/Sin-kom/services-tab/comfort-soba/slika6.JPG",
+      "/images/Sin-kom/comfort-soba/slika8.JPG",
+      "/images/Sin-kom/comfort-soba/slika9.JPG",
+      "/images/Sin-kom/comfort-soba/slika15.JPG",
+      "/images/Sin-kom/comfort-soba/slika6.JPG",
     ],
     nameKey: "comfortRoom",
     descriptionKey: "comfortRoomDescription",
@@ -42,17 +41,16 @@ export const ROOMS = [
       "safe",
     ],
     prices: [
-      { labelKey: "priceOnePerson", amount: "5.000 din" },
-      { labelKey: "priceTwoPersons", amount: "6.100 din" },
+      { labelKey: "priceOnePerson", amount: "OD 5.000 RSD" },
     ]
   },
   {
     id: "family-room",
     images: [
-      "/images/Sin-kom/services-tab/dvokrevetna-soba/slika4.JPG",
-      "/images/Sin-kom/services-tab/dvokrevetna-soba/slika7.JPG",
-      "/images/Sin-kom/services-tab/dvokrevetna-soba/slika24.JPG",
-      "/images/Sin-kom/services-tab/dvokrevetna-soba/slika20.JPG",
+      "/images/Sin-kom/dvokrevetna-soba/slika4.JPG",
+      "/images/Sin-kom/dvokrevetna-soba/slika7.JPG",
+      "/images/Sin-kom/dvokrevetna-soba/slika24.JPG",
+      "/images/Sin-kom/dvokrevetna-soba/slika20.JPG",
     ],
     nameKey: "doubleRoom",
     descriptionKey: "doubleRoomDescription",
@@ -68,8 +66,7 @@ export const ROOMS = [
       "sosAlarm",
     ],
     prices: [
-      { labelKey: "priceOnePerson", amount: "4.000 din" },
-      { labelKey: "priceTwoPersons", amount: "5.300 din" },
+      { labelKey: "priceOnePerson", amount: "OD 4.000 RSD" },
     ]
   },
 ];
