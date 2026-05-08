@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Image from "next/image";
 import SwiperMain from "./SwiperMain/SwiperMain";
 
 import "./style.css";
@@ -12,7 +11,6 @@ import ApartmentIcon from "@mui/icons-material/Apartment";
 import { Icon } from "@mui/material";
 import { useLanguage } from "./_shared/Localization/LanguageContext";
 import RoomsCarousel from "./_shared/RoomsCarousel/RoomsCarousel";
-import MarkImage from "@/public/images/markout10-circle.jpeg";
 import { Link } from "react-aria-components";
 import { useInView } from "./_shared/hooks/useInView";
 
@@ -36,7 +34,7 @@ export default function Home() {
             <h1 className={`swiperLine4 text-white text-4xl md:text-7xl font-bold text-center drop-shadow-2xl uppercase reveal-hidden animate-fade-in-up delay-200`}>
               {t.swiperLine4}
             </h1>
-            <p className={`swiperLine5 text-[#f7cd25] text-3xl md:text-5xl text-center drop-shadow-2xl mt-6 reveal-hidden animate-fade-in-up delay-400`}>
+            <p className={`swiperLine5 text-[#EBD27D] text-3xl md:text-5xl text-center drop-shadow-2xl mt-6 reveal-hidden animate-fade-in-up delay-400`}>
               {t.swiperLine5}
             </p>
           </div>
@@ -46,31 +44,21 @@ export default function Home() {
           <h1 className="mainPageText font-semibold text-[32px] md:text-[52px] leading-tight text-center mb-6">
             {t.mainPageText}
           </h1>
-          <div className="flex flex-col lg:flex-row items-center gap-10 w-full max-w-7xl">
-            <div className="w-full lg:w-1/2">
-              <Image
-                src="/images/homescreen-photo.png"
-                alt="Hotel Sin-Kom"
-                width={600}
-                height={400}
-              />
-            </div>
-            <div className="w-full lg:w-1/2 text-center lg:text-left flex flex-col justify-center">
-              <div className="mt-6 flex flex-col gap-4">
-                <p>{t.paragraph1}</p>
-                <div className={`${isExpanded ? 'flex' : 'hidden lg:flex'} flex-col gap-4`}>
-                  <p>{t.paragraph2}</p>
-                  <p>{t.paragraph3}</p>
-                  <p>{t.paragraph4}</p>
-                  <p>{t.paragraph6}</p>
-                </div>
-                <button 
-                  onClick={() => setIsExpanded(!isExpanded)}
-                  className="lg:hidden text-[#7c6648] font-bold mt-2 uppercase text-xs tracking-widest self-center underline underline-offset-4"
-                >
-                  {isExpanded ? 'Prikaži manje' : 'Prikaži više'}
-                </button>
+          <div className="w-full max-w-4xl text-center flex flex-col justify-center mx-auto px-4">
+            <div className="mt-6 flex flex-col gap-4">
+              <p>{t.paragraph1}</p>
+              <div className={`${isExpanded ? 'flex' : 'hidden lg:flex'} flex-col gap-4`}>
+                <p>{t.paragraph2}</p>
+                <p>{t.paragraph3}</p>
+                <p>{t.paragraph4}</p>
+                <p>{t.paragraph6}</p>
               </div>
+              <button 
+                onClick={() => setIsExpanded(!isExpanded)}
+                className="lg:hidden text-[#7c6648] font-bold mt-2 uppercase text-xs tracking-widest self-center underline underline-offset-4"
+              >
+                {isExpanded ? 'Prikaži manje' : 'Prikaži više'}
+              </button>
             </div>
           </div>
           <div className={`icons-container flex flex-col items-start gap-2 mt-16 w-full max-w-4xl reveal-hidden animate-fade-in-up delay-800`}>
@@ -147,7 +135,7 @@ export default function Home() {
         <div className={`mark-container reveal-hidden animate-fade-in-up delay-1400`}>
           <div className="booking-reviews-container">
           <div className="booking-reviews-content">
-<div className="text-[#fcd949] font-bold text-2xl uppercase tracking-widest mb-4">{t.markText}</div>
+<div className="text-[#EBD27D] font-bold text-2xl uppercase tracking-widest mb-4">{t.markText}</div>
 
           
             

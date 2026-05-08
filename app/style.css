@@ -273,7 +273,7 @@
 }
 
 .review-card:hover {
-  border-color: #fcd949;
+  border-color: #EBD27D;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
 }
 
@@ -292,7 +292,7 @@
 
 .review-stars {
   font-size: 14px;
-  color: #fcd949;
+  color: #EBD27D;
 }
 
 .review-text {
@@ -307,7 +307,7 @@
   padding: 10px 30px;
   background-color: transparent;
   color: #ffffff;
-  border: 1px solid #fcd949;
+  border: 1px solid #EBD27D;
   text-decoration: none;
   font-weight: 600;
   cursor: pointer;
@@ -316,7 +316,7 @@
 }
 
 .booking-reviews-button:hover {
-  background-color: #fcd949;
+  background-color: #EBD27D;
   color: #000000;
 }
 
