@@ -95,9 +95,9 @@ const RoomService = ({ images, nameKey, descriptionKey, features, prices }: Prop
           </button>
         </div>
 
-        {/* Thumbnails (Shows first 5) */}
+        {/* Thumbnails */}
         <div className="flex gap-2 overflow-x-auto pb-1">
-          {images.slice(0, 5).map((img, idx) => (
+          {images.map((img, idx) => (
             <button
               key={idx}
               onClick={() => setCurrentIndex(idx)}
